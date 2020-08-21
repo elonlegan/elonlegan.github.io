@@ -84,7 +84,6 @@ a:hover {
 .hero-image {
   object-fit: cover;
   max-width: 500px;
-  width: 100%;
 }
 
 .portfolio {
@@ -93,7 +92,6 @@ a:hover {
 }
 
 .project {
-  border: 1px solid gray;
   border-radius: 10px;
   margin-bottom: 15px;
   padding: 20px;
@@ -103,6 +101,12 @@ a:hover {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
+.project,
+.event {
+  box-shadow: 1px 1px 10px 1px lightgray;
+}
+
 .project:last-child {
   margin-bottom: 0;
 }
@@ -393,7 +397,6 @@ figure {
     top: 0;
     z-index: 1;
     max-width: initial;
-    width: 100%;
   }
   .portfolio {
     padding: 1.2rem 0;
