@@ -200,6 +200,23 @@ figure {
   padding: 0 10px;
 }
 
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  border-radius: 50%;
+  margin: 5px 0;
+}
+
+.logo span {
+  margin-left: 10px;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 24px;
+}
+
 .flexbox {
   display: flex;
   flex-wrap: wrap;
