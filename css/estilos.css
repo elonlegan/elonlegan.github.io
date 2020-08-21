@@ -1,29 +1,3 @@
-/* reglas
-selectores
-declaraciones
-propiedades
-valores */
-
-/* seletor de etiqueta  header - section - article - nav */
-/* header {
-  background: pink;
-  color: red
-} */
-
-/* selector descendente  */
-/* body header div nav ol li a  */
-
-/* selector de clase . */
-
-/* .link */
-
-/* selector de id # */
-/* #portafolio */
-
-/* gris oscuro = #1d252c */
-/* gris claro = #626262 */
-/* background gris = #1d252c */
-/* celeste = #026fff */
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon.eot?166b67");
@@ -68,7 +42,6 @@ h5,
 h6 {
   font-family: "Fjalla One", sans-serif;
   font-weight: normal;
-  /* font-style: italic; */
 }
 
 h1 {
@@ -77,9 +50,6 @@ h1 {
   letter-spacing: -0.2px;
   color: white;
   margin: 0;
-  /* margin: 100px 150px 70px 30px; */
-  /* text-transform: uppercase; */
-  /* text-decoration: dashed; */
 }
 h1 strong {
   color: #026fff;
@@ -93,17 +63,22 @@ h2 {
   margin-bottom: 40px;
 }
 
+a {
+  text-decoration: ;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
 .hero {
   height: 300px;
-  /* background-image: url('../images/hero.jpg'); */
   background-color: #1d252c;
-  /* background-size: 500px 300px; */
-  /* background-repeat: no-repeat; */
-  /* background-position-x: right; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  box-shadow: inset 0px 4px 7px 0px black;
 }
 
 .hero-image {
@@ -115,29 +90,12 @@ h2 {
 .portfolio {
   background: #fafafa;
   padding: 20px;
-  /* background: red; */
 }
 
 .project {
-  /* border-top: 10px solid red;
-  border-right: 10px solid green;
-  border-left: 10px solid orange;
-  border-bottom: 10px solid pink; */
-  /* color: blue; */
-  /* border-top-color: red;
-  border-top-width: 15px;
-  border-top-style: solid; */
   border: 1px solid gray;
   border-radius: 10px;
-  /* border-top-left-radius: 50px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px; */
-  /* margin: 10px; */
   margin-bottom: 15px;
-  /* margin-right
-  margin-left
-  margin-top */
   padding: 20px;
   background: white;
   display: flex;
@@ -153,15 +111,14 @@ h2 {
 .project-url {
   margin: 10px 0;
 }
+
 .project-description {
   font-size: 20px;
 }
+
 .project strong {
   font-family: "Fjalla One", sans-serif;
 }
-/* .project-date {
-  margin: 10px 0;
-} */
 
 .project-title {
   font-size: 30px;
@@ -217,6 +174,21 @@ figure {
 .header ol li {
   height: inherit;
 }
+
+.header ol li .border {
+  height: initial;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin: 14px 0;
+}
+
+.header ol li .border:hover {
+  color: #1d252c;
+  background-color: white;
+  opacity: 1;
+}
+
 .header a {
   display: flex;
   align-items: center;
@@ -226,9 +198,7 @@ figure {
 
 .flexbox {
   display: flex;
-  /* flex-wrap: nowrap; */
   flex-wrap: wrap;
-  /* flex-direction: column; */
 }
 
 .box {
@@ -236,7 +206,6 @@ figure {
   height: 50px;
   margin: 5px;
   border: 1px solid red;
-
   flex-shrink: 0;
 }
 
@@ -276,7 +245,6 @@ figure {
   font-size: 0;
 }
 .event img {
-  /* max-width: 480px; */
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -355,6 +323,7 @@ figure {
   color: white;
   background-color: transparent;
   border-color: white;
+  opacity: 1;
 }
 
 .email h3 {
@@ -362,7 +331,6 @@ figure {
 }
 
 .container {
-  /* border: 1px solid red; */
   max-width: 1024px;
   flex: 1;
   margin: 0 auto;
@@ -391,7 +359,7 @@ figure {
 
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
   height: 0;
 }
 
@@ -408,8 +376,6 @@ figure {
 @media screen and (max-width: 1023px) {
   .container {
     margin: 0 15px;
-    /* width: auto; */
-    /* flex: 1; */
   }
   .event-list-title {
     margin-left: 0;
@@ -422,14 +388,12 @@ figure {
   }
   .hero-image {
     position: absolute;
-    /* left: 0; */
     right: 0;
     bottom: 0;
     top: 0;
     z-index: 1;
     max-width: initial;
     width: 100%;
-    /* height: auto; */
   }
   .portfolio {
     padding: 1.2rem 0;
