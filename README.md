@@ -1,2 +1,0 @@
-# Portafolio
-Un portafolio personal
