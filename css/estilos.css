@@ -64,11 +64,7 @@ h2 {
 }
 
 a {
-  text-decoration: ;
-}
-
-a:hover {
-  opacity: 0.7;
+  text-decoration: none;
 }
 
 .hero {
@@ -105,6 +101,21 @@ a:hover {
 .project,
 .event {
   box-shadow: 1px 1px 10px 1px lightgray;
+}
+
+.project:hover {
+  box-shadow: 1px 1px 10px 1px #026fff;
+  cursor: pointer;
+}
+
+.project a {
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+  color: inherit;
 }
 
 .project:last-child {
@@ -167,6 +178,11 @@ figure {
   color: white;
   text-decoration: none;
 }
+
+.header a:hover {
+  opacity: 0.7;
+}
+
 .menu {
   height: inherit;
 }
@@ -339,7 +355,6 @@ figure {
   color: white;
   background-color: transparent;
   border-color: white;
-  opacity: 1;
 }
 
 .email h3 {
