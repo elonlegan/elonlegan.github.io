@@ -179,7 +179,8 @@ figure {
   text-decoration: none;
 }
 
-.header a:hover {
+.header a:hover,
+.event-url:hover {
   opacity: 0.7;
 }
 
