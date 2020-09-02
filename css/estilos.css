@@ -326,6 +326,7 @@ figure {
 }
 
 .email a:hover {
+  background-image: url("../images/envelope-hover.svg");
   color: white;
   background-color: transparent;
   border-color: white;
