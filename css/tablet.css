@@ -1,3 +1,46 @@
+h2 {
+  font-size: 1.2em;
+  margin: 0 0 1.2rem 0;
+}
+.logo {
+  text-align: center;
+}
+.header {
+  height: auto;
+  display: block;
+}
+.header ol {
+  display: block;
+}
+.header a {
+  justify-content: center;
+  height: 40px;
+  font-size: 2em;
+  text-decoration: underline;
+  margin-bottom: 0.5em;
+}
+.burger-menu {
+  display: block;
+}
+.menu {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  left: -100vw;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  background-color: var(--principal-color);
+  opacity: 0.9;
+  justify-content: center;
+  transition: 0.3s;
+}
+.menu.is-active {
+  left: 0;
+}
+
+/*------------------------------------------------------------*/
 .container#skill {
   height: 100vh;
   width: 100vw;
@@ -23,4 +66,10 @@
   margin-top: 20px;
   width: 100%;
   height: 33vh;
+}
+
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 2em;
+  }
 }

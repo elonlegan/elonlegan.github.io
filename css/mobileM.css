@@ -1,0 +1,53 @@
+.hero {
+  padding: 3em 1em;
+}
+
+.project-details {
+  width: auto;
+}
+.project-imageContainer {
+  width: auto;
+}
+.project-title {
+  font-size: 1.2em;
+}
+
+.project-course,
+.project-date,
+.project-url {
+  margin: 0.4em 0;
+}
+.project-description {
+  font-size: 0.8em;
+}
+h1 {
+  font-size: 1.5em;
+}
+.event {
+  width: auto;
+  flex-shrink: initial;
+  margin: 0 0 20px 0;
+}
+.event-detail {
+  margin: -40px 20px 0 20px;
+}
+
+.contact {
+  display: block;
+  height: auto;
+  padding: 1.5em 0;
+}
+.email {
+  text-align: center;
+}
+.email a {
+  margin: 1em auto 1em;
+}
+.social {
+  text-align: center;
+}
+.footer {
+  display: block;
+  text-align: center;
+  border: 1px solid transparent;
+}
