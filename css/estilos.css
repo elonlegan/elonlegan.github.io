@@ -1,9 +1,20 @@
+:root {
+  --principal-color: #026fff;
+  --background-hero: #1d252c;
+  --background-card: #f4fbff;
+  --background: #fafafa;
+  --font-color: white;
+  --colorrr: white;
+  --font-title: "Fjalla One", sans-serif;
+  --font-regular: "Source Sans Pro", sans-serif;
+}
+
 .icon-menu:before {
   content: "\e900";
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: var(--font-regular);
   margin: 0;
 }
 
@@ -13,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Fjalla One", sans-serif;
+  font-family: var(--font-title);
   font-weight: normal;
 }
 
@@ -21,14 +32,14 @@ h1 {
   font-size: 40px;
   line-height: 1.5;
   letter-spacing: -0.2px;
-  color: white;
+  color: var(--font-color);
   margin: 0;
 }
 h1 strong {
-  color: #026fff;
+  color: var(--principal-color);
 }
 h2 {
-  color: #026fff;
+  color: var(--principal-color);
   text-transform: uppercase;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
@@ -42,7 +53,7 @@ a {
 
 .hero {
   height: 300px;
-  background-color: #1d252c;
+  background-color: var(--background-hero);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,7 +67,7 @@ a {
 }
 
 .portfolio {
-  background: #fafafa;
+  background-color: var(--background);
   padding: 20px;
 }
 
@@ -64,7 +75,7 @@ a {
   border-radius: 10px;
   margin-bottom: 15px;
   padding: 20px;
-  background: white;
+  background: var(--colorrr);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -77,7 +88,7 @@ a {
 }
 
 .project:hover {
-  box-shadow: 1px 1px 10px 1px #026fff;
+  box-shadow: 1px 1px 10px 1px var(--principal-color);
   cursor: pointer;
 }
 
@@ -105,7 +116,8 @@ a {
 }
 
 .project strong {
-  font-family: "Fjalla One", sans-serif;
+  font-family: var(--font-title);
+  color: var(--principal-color);
 }
 
 .project-title {
@@ -127,8 +139,8 @@ a {
 }
 
 .header {
-  background-color: #1d252c;
-  color: white;
+  background-color: var(--background-hero);
+  color: var(--background);
   display: flex;
   height: 70px;
   align-items: center;
@@ -148,7 +160,7 @@ figure {
 }
 
 .header a {
-  color: white;
+  color: var(--font-color);
   text-decoration: none;
 }
 
@@ -171,15 +183,15 @@ figure {
 
 .header ol li .border {
   height: initial;
-  border: 1px solid white;
+  border: 1px solid var(--font-color);
   padding: 10px 20px;
   border-radius: 4px;
   margin: 14px 0;
 }
 
 .header ol li .border:hover {
-  color: #1d252c;
-  background-color: white;
+  color: var(--background-hero);
+  background-color: var(--colorrr);
   opacity: 1;
 }
 
@@ -216,8 +228,8 @@ figure {
 }
 
 .footer {
-  color: white;
-  background-color: #1d252c;
+  color: var(--font-color);
+  background-color: var(--background-hero);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -228,7 +240,7 @@ figure {
 }
 
 .footer a {
-  color: white;
+  color: var(--font-color);
 }
 
 .event-list {
@@ -245,7 +257,7 @@ figure {
   flex-shrink: 0;
   border-radius: 10px;
   overflow: hidden;
-  background: #f4fbff;
+  background: var(--background-card);
 }
 .event-imageContainer {
   font-size: 0;
@@ -258,7 +270,7 @@ figure {
 .event-detail {
   margin: 20px 40px;
   margin-top: -40px;
-  background-color: white;
+  background-color: var(--colorrr);
   position: relative;
   padding: 20px;
   text-align: center;
@@ -268,7 +280,7 @@ figure {
 }
 
 .event-url {
-  color: #026fff;
+  color: var(--principal-color);
   border: 1px solid;
   padding: 5px 20px;
   text-decoration: none;
@@ -276,8 +288,8 @@ figure {
 }
 
 .contact {
-  background-color: #026fff;
-  color: white;
+  background-color: var(--principal-color);
+  color: var(--font-color);
   height: 150px;
   display: flex;
   align-items: center;
@@ -321,15 +333,15 @@ figure {
   background-position-y: center;
   background-position-x: 5px;
   display: block;
-  background-color: white;
+  background-color: var(--font-color);
   color: gray;
 }
 
 .email a:hover {
   background-image: url("../images/envelope-hover.svg");
-  color: white;
+  color: var(--colorrr);
   background-color: transparent;
-  border-color: white;
+  border-color: var(--colorrr);
 }
 
 .email h3 {
@@ -357,7 +369,7 @@ figure {
   top: 5px;
   line-height: 40px;
   text-align: center;
-  color: white;
+  color: var(--colorrr);
   cursor: pointer;
   z-index: 4;
   display: none;
@@ -386,7 +398,7 @@ figure {
 
 .skills-links {
   width: 40%;
-  height: 100%;
+  height: 80%;
 }
 
 .link-container {
@@ -398,8 +410,8 @@ figure {
 .skill-link {
   height: fit-content;
   padding: 0px 3%;
-  color: white;
-  background-color: #026fff;
+  color: var(--font-color);
+  background-color: var(--principal-color);
   border-radius: 10px;
   text-align: center;
 }
@@ -482,7 +494,8 @@ figure {
     display: flex;
     align-items: center;
     z-index: 3;
-    background-color: rgba(0, 100, 255, 0.9);
+    background-color: var(--principal-color);
+    opacity: 0.9;
     justify-content: center;
     transition: 0.3s;
   }
