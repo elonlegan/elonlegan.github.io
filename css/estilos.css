@@ -357,6 +357,7 @@ figure {
   align-items: inherit;
   height: inherit;
   flex-wrap: inherit;
+  grid-template-areas: inherit;
 }
 
 .burger-menu {
