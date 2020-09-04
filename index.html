@@ -10,11 +10,12 @@
     />
     <link rel="stylesheet" href="css/font.css" />
     <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/tech-links.css">
+    <link rel="stylesheet" href="css/switch.css">
     <link rel="stylesheet" media="(max-width: 1023px)" href="css/desktop.css">
     <link rel="stylesheet" media="(max-width: 767px)" href="css/tablet.css">
     <link rel="stylesheet" media="(max-width: 480px)" href="css/mobileM.css">
     <link rel="stylesheet" media="(max-width: 320px)" href="css/mobileS.css">
-    <link rel="stylesheet" href="css/tech-links.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
@@ -39,6 +40,10 @@
             </li>
             <li>
               <a class="link border" href="#contacto">Trabajemos juntos</a>
+            </li>
+            <li id="li-switch">
+              <p class="dark-paragraph">Dark Mode</p>
+              <button class="switch" id="switch"><span></span><span></span></button>
             </li>
           </ol>
         </nav>
@@ -70,11 +75,6 @@
                 <a href="" class="tech-link html">HTML</a>
                 <a href="" class="tech-link css">CSS</a>
                 <a href="" class="tech-link js">JS</a>
-                <a href="" class="tech-link nodejs">Node.js</a>
-                <a href="" class="tech-link angular">Node.js</a>
-                <a href="" class="tech-link react">Node.js</a>
-                <a href="" class="tech-link vue">Node.js</a>
-                <a href="" class="tech-link svelte">Node.js</a>
               </div>
               <p class="project-date">
                 <small><strong>Fecha:</strong> 01/07/2018</small>
@@ -398,5 +398,6 @@
         }
       }
     </script>
+    <script src="scripts/switch.js"></script>
   </body>
 </html>

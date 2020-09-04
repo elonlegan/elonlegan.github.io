@@ -2,20 +2,39 @@
   --principal-color: #026fff;
   --background-hero: #1d252c;
   --background-card: #f4fbff;
+  --background-project: white;
   --background: #fafafa;
-  --font-color: white;
-  --colorrr: white;
+  --font-color: black;
+  --color: white;
   --font-title: "Fjalla One", sans-serif;
   --font-regular: "Source Sans Pro", sans-serif;
+  --box-shadow: 1px 1px 10px 1px lightgrey;
+}
+
+:root.dark {
+  --background-hero: #252b43;
+  --background-card: #252b43;
+  --background-project: #252b43;
+  --background: #1d2029;
+  --font-color: white;
+  --color: white;
+  --font-title: "Fjalla One", sans-serif;
+  --font-regular: "Source Sans Pro", sans-serif;
+  --box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.75);
 }
 
 .icon-menu:before {
   content: "\e900";
 }
 
+* {
+  transition: 0.3s ease all;
+}
+
 body {
   font-family: var(--font-regular);
   margin: 0;
+  background-color: var(--background);
 }
 
 h1,
@@ -32,7 +51,7 @@ h1 {
   font-size: 40px;
   line-height: 1.5;
   letter-spacing: -0.2px;
-  color: var(--font-color);
+  color: var(--color);
   margin: 0;
 }
 h1 strong {
@@ -67,7 +86,6 @@ a {
 }
 
 .portfolio {
-  background-color: var(--background);
   padding: 20px;
 }
 
@@ -75,7 +93,7 @@ a {
   border-radius: 10px;
   margin-bottom: 15px;
   padding: 20px;
-  background: var(--colorrr);
+  background: var(--color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,7 +102,9 @@ a {
 
 .project,
 .event {
-  box-shadow: 1px 1px 10px 1px lightgray;
+  background-color: var(--background-card);
+  box-shadow: var(--box-shadow);
+  color: var(--font-color);
 }
 
 .project:hover {
@@ -153,7 +173,7 @@ a {
 
 .header {
   background-color: var(--background-hero);
-  color: var(--background);
+  color: var(--color);
   display: flex;
   height: 70px;
   align-items: center;
@@ -173,7 +193,7 @@ figure {
 }
 
 .header a {
-  color: var(--font-color);
+  color: var(--color);
   text-decoration: none;
 }
 
@@ -189,6 +209,7 @@ figure {
   display: flex;
   height: inherit;
   flex-wrap: wrap;
+  align-items: center;
 }
 .header ol li {
   height: inherit;
@@ -196,7 +217,7 @@ figure {
 
 .header ol li .border {
   height: initial;
-  border: 1px solid var(--font-color);
+  border: 1px solid;
   padding: 10px 20px;
   border-radius: 4px;
   margin: 14px 0;
@@ -204,7 +225,7 @@ figure {
 
 .header ol li .border:hover {
   color: var(--background-hero);
-  background-color: var(--colorrr);
+  background-color: var(--color);
   opacity: 1;
 }
 
@@ -241,7 +262,7 @@ figure {
 }
 
 .footer {
-  color: var(--font-color);
+  color: var(--color);
   background-color: var(--background-hero);
   display: flex;
   align-items: center;
@@ -253,7 +274,7 @@ figure {
 }
 
 .footer a {
-  color: var(--font-color);
+  color: var(--color);
 }
 
 .event-list {
@@ -283,7 +304,7 @@ figure {
 .event-detail {
   margin: 20px 40px;
   margin-top: -40px;
-  background-color: var(--colorrr);
+  background-color: var(--background);
   position: relative;
   padding: 20px;
   text-align: center;
@@ -302,7 +323,7 @@ figure {
 
 .contact {
   background-color: var(--principal-color);
-  color: var(--font-color);
+  color: var(--color);
   height: 150px;
   display: flex;
   align-items: center;
@@ -346,15 +367,15 @@ figure {
   background-position-y: center;
   background-position-x: 5px;
   display: block;
-  background-color: var(--font-color);
+  background-color: var(--color);
   color: gray;
 }
 
 .email a:hover {
   background-image: url("../images/envelope-hover.svg");
-  color: var(--colorrr);
+  color: var(--color);
   background-color: transparent;
-  border-color: var(--colorrr);
+  border-color: var(--color);
 }
 
 .email h3 {
@@ -383,7 +404,7 @@ figure {
   top: 5px;
   line-height: 40px;
   text-align: center;
-  color: var(--colorrr);
+  color: var(--color);
   cursor: pointer;
   z-index: 4;
   display: none;
@@ -424,7 +445,7 @@ figure {
 .skill-link {
   height: fit-content;
   padding: 0px 3%;
-  color: var(--font-color);
+  color: var(--color);
   background-color: var(--principal-color);
   border-radius: 10px;
   text-align: center;
