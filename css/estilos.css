@@ -92,7 +92,7 @@ a {
   cursor: pointer;
 }
 
-.project a {
+.project .link-container {
   margin: 0 auto;
   display: inherit;
   justify-content: inherit;
@@ -109,6 +109,19 @@ a {
 .project-date,
 .project-url {
   margin: 10px 0;
+}
+
+.project-course {
+  font-family: var(--font-title);
+}
+
+.tech-link {
+  margin-right: 5px;
+  padding: 0px 3%;
+  color: var(--font-color);
+  background-color: var(--principal-color);
+  border-radius: 10px;
+  text-align: center;
 }
 
 .project-description {

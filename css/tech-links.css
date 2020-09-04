@@ -1,0 +1,40 @@
+.tech-link.js {
+  color: #000000;
+  background-color: #f7df1e;
+}
+
+.tech-link.html {
+  color: #ffffff;
+  background-color: #ff4500;
+}
+
+.tech-link.css {
+  color: #ffffff;
+  background-color: #1f5faa;
+}
+.tech-link.nodejs {
+  color: #659a60;
+  background-color: #f7f7f7;
+  border: 1px solid;
+}
+.tech-link.angular {
+  color: #fff;
+  background-color: #dd0031;
+}
+.tech-link.react {
+  color: #03d6f6;
+  background-color: #232325;
+}
+.tech-link.svelte {
+  color: #f73c00;
+  background-color: #fff;
+  border: 1px solid;
+}
+.tech-link.vue {
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 179, 123, 1) 0%,
+    rgba(45, 70, 92, 1) 100%
+  );
+}
