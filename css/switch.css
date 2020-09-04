@@ -45,6 +45,7 @@
 .switch.active::after {
   right: 5px;
   left: unset;
+  background: var(--background);
 }
 
 .switch span {

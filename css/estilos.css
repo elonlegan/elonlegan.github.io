@@ -1,5 +1,6 @@
 :root {
   --principal-color: #026fff;
+  --principal-color-opacity: #026fffdb;
   --background-hero: #1d252c;
   --background-card: #f4fbff;
   --background-project: white;
@@ -25,10 +26,6 @@
 
 .icon-menu:before {
   content: "\e900";
-}
-
-* {
-  transition: 0.3s ease all;
 }
 
 body {
@@ -78,6 +75,7 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
   box-shadow: inset 0px 4px 7px 0px black;
+  transition: 0.3s ease all;
 }
 
 .hero-image {
@@ -105,6 +103,7 @@ a {
   background-color: var(--background-card);
   box-shadow: var(--box-shadow);
   color: var(--font-color);
+  transition: 0.3s ease all;
 }
 
 .project:hover {
@@ -398,7 +397,7 @@ figure {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.8);
+  background: #171717;
   position: fixed;
   left: 5px;
   top: 5px;
