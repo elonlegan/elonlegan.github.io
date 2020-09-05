@@ -8,8 +8,10 @@ ipad.addListener((event) => {
 function hideShow() {
   if ($menu.classList.contains("is-active")) {
     $menu.classList.remove("is-active");
+    $burgerMenu.classList.remove("is-active");
   } else {
     $menu.classList.add("is-active");
+    $burgerMenu.classList.add("is-active");
   }
 }
 function runBurgerMenu(yes) {
@@ -30,6 +32,7 @@ document.addEventListener("click", function (event) {
     $menu.classList.contains("is-active")
   ) {
     $menu.classList.remove("is-active");
+    $burgerMenu.classList.remove("is-active");
   } else {
     console.log("adentro");
   }
