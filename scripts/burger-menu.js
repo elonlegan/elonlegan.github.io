@@ -5,15 +5,12 @@ runBurgerMenu(ipad.matches);
 ipad.addListener((event) => {
   runBurgerMenu(event.matches);
 });
+
 function hideShow() {
-  if ($menu.classList.contains("is-active")) {
-    $menu.classList.remove("is-active");
-    $burgerMenu.classList.remove("is-active");
-  } else {
-    $menu.classList.add("is-active");
-    $burgerMenu.classList.add("is-active");
-  }
+  $menu.classList.toggle("is-active");
+  $burgerMenu.classList.toggle("is-active");
 }
+
 function runBurgerMenu(yes) {
   if (yes) {
     $burgerMenu.addEventListener("click", hideShow);
