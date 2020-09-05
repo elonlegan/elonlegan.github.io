@@ -33,7 +33,5 @@ document.addEventListener("click", function (event) {
   ) {
     $menu.classList.remove("is-active");
     $burgerMenu.classList.remove("is-active");
-  } else {
-    console.log("adentro");
   }
 });

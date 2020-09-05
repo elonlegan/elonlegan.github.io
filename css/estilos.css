@@ -152,6 +152,14 @@ a {
   color: var(--principal-color);
 }
 
+.project-link:hover {
+  color: var(--principal-color);
+}
+
+.project-link {
+  color: var(--font-color);
+}
+
 .project-title {
   font-size: 30px;
   margin-top: 0;
@@ -450,7 +458,8 @@ figure {
   text-align: center;
 }
 
-.skill-link:hover {
+.skill-link:hover,
+.tech-link:hover {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
