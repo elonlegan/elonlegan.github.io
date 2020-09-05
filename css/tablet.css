@@ -46,6 +46,18 @@ h2 {
   /* text-decoration: underline; */
   padding: 0.5em 0;
 }
+
+.header a:hover,
+.header ol li .border:hover {
+  color: var(--principal-color);
+  opacity: 1;
+  border-color: var(--color);
+}
+
+.header ol li .border:hover {
+  background-color: unset;
+}
+
 .burger-menu {
   display: block;
 }
