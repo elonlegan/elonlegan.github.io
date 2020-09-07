@@ -472,3 +472,7 @@ figure {
   width: 110%;
   height: 100%;
 }
+
+.none {
+  display: none;
+}
