@@ -9,6 +9,12 @@ ipad.addListener((event) => {
 function hideShow() {
   $menu.classList.toggle("is-active");
   $burgerMenu.classList.toggle("is-active");
+
+  if ($menu.classList.contains("is-active")) {
+    localStorage.setItem("menu", "true");
+  } else {
+    localStorage.setItem("menu", "false");
+  }
 }
 
 function runBurgerMenu(yes) {
@@ -32,3 +38,11 @@ document.addEventListener("click", function (event) {
     $burgerMenu.classList.remove("is-active");
   }
 });
+
+if (localStorage.getItem("menu") === "true") {
+  $menu.classList.add("is-active");
+  $burgerMenu.classList.add("is-active");
+} else {
+  $menu.classList.remove("is-active");
+  $burgerMenu.classList.remove("is-active");
+}
