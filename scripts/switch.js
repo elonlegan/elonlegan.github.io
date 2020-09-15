@@ -15,7 +15,7 @@ btnSwitch.addEventListener("click", () => {
 if (localStorage.getItem("dark-mode") === "true") {
   groot.classList.add("dark");
   btnSwitch.classList.add("active");
-} else {
-  groot.classList.remove("dark");
-  btnSwitch.classList.remove("active");
+} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  groot.classList.add("dark");
+  btnSwitch.classList.add("active");
 }
