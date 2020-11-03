@@ -1,27 +1,29 @@
 .container {
-  margin: 0 15px;
+  margin: 0 auto;
 }
-.event-list-title {
-  margin-left: 0;
-}
+
 .hero {
-  height: auto;
-  position: relative;
-  overflow: hidden;
-  padding: 2em;
+  height: 300px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: unset;
 }
+
 .hero-image {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  z-index: 1;
-  max-width: initial;
+  position: unset;
 }
+
 .portfolio {
-  padding: 1.2rem 0;
+  padding: 20px;
 }
-h1 {
-  position: relative;
-  z-index: 2;
+
+.event-list-title {
+  margin-left: 20px;
+}
+
+.skill-image-container {
+  height: unset;
 }

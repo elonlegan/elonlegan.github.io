@@ -4,12 +4,6 @@
   height: initial;
 }
 
-.dark-paragraph {
-  margin: 0;
-  padding: 10px 10px 10px 20px;
-  margin-left: 10px;
-  border-left: 1px solid;
-}
 .switch {
   background: #5f616d;
   border-radius: 1000px;
