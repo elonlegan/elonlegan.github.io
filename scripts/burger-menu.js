@@ -36,6 +36,7 @@ document.addEventListener("click", function (event) {
   ) {
     $menu.classList.remove("is-active");
     $burgerMenu.classList.remove("is-active");
+    localStorage.setItem("menu", "false");
   }
 });
 

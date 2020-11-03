@@ -14,7 +14,6 @@
   left: 5px;
   top: 5px;
   padding: 10px 10px;
-  display: none;
   cursor: pointer;
   transition-property: opacity, filter;
   transition-duration: 0.15s;
