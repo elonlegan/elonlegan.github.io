@@ -10,7 +10,7 @@ passion for learning </title>
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/font.css" />
-    <link rel="stylesheet" href="css/tech-links.css">
+    <link rel="stylesheet" href="css/tech-buttons.css">
     <link rel="stylesheet" href="css/switch.css">
     <link rel="stylesheet" href="css/hamburgers.css" >
     <link rel="stylesheet" href="css/style.css" />
@@ -29,26 +29,27 @@ passion for learning </title>
       <div class="container">
         <figure class="logo">
           <img
+            class="logo__image"
             src="https://static.platzi.com/media/avatars/avatars/layoner_6e4ee1f7-74eb-48f1-a8fc-4c9c1954a439"
             height="50"
             alt="Logo de http://leonidasesteban.com"
           />
-          <span>Ángel León</span>
+          <span class="logo__text">Ángel León</span>
         </figure>
-        <nav class="menu">
+        <nav class="nav nav--header">
           <ol>
             <li>
-              <a class="link" href="#portafolio">Portfolio</a>
+              <a class="nav__link" href="#portafolio">Portfolio</a>
             </li>
             <li class="none">
-              <a class="link" href="#eventos">Experiencia</a>
+              <a class="nav__link" href="#eventos">Experiencia</a>
             </li>
             <li>
-              <a class="link border" href="#contacto">Let's work together</a>
+              <a class="nav__link nav__link--border" href="#contacto">Let's work together</a>
             </li>
-            <li id="li-switch">
-              <p class="dark-paragraph">Dark Mode</p>
-              <button class="switch" id="switch"><span></span><span></span></button>
+            <li class="dark-mode dark-mode--header">
+              <p class="dark-mode__text">Dark Mode</p>
+              <button class="dark-mode__switch" ><span></span><span></span></button>
             </li>
           </ol>
         </nav>
@@ -56,13 +57,13 @@ passion for learning </title>
     </header>
     <section class="hero">
       <div class="container">
-        <h1>
-          Hi! I'm <strong>Angel León</strong> <br />
-          <strong>Javascript</strong> Developer with <br />
-          passion for <strong>learning</strong>
+        <h1 class="hero__title">
+          Hi! I'm <strong class="hero__title hero__title--strong">Angel León</strong> <br />
+          <strong class="hero__title hero__title--strong">Javascript</strong> Developer with <br />
+          passion for <strong class="hero__title hero__title--strong">learning</strong>
         </h1>
         <img
-          class="hero-image"
+          class="hero__image"
           src="images/hero.jpg"
           height="300"
           alt="imagen principal del sitio"
@@ -71,34 +72,34 @@ passion for learning </title>
     </section>
     <section id="portafolio" class="portfolio">
       <div class="container">
-        <h2>PORTFOLIO (OUTSTANDING PROJECTS)</h2>
+        <h2 class="portfolio__title">PORTFOLIO (OUTSTANDING PROJECTS)</h2>
         <article class="project">
           <a href="#" class="link-container">
-            <div class="project-details">
-              <h3 class="project-title">Portfolio</h3>
-              <div class="project-course">
-                <a href="https://platzi.com/@elonlegan/curso/2008-html-css-2020/diploma/detalle/" class="tech-link html" target="_blank">HTML</a>
-                <a href="https://platzi.com/@elonlegan/curso/1744-practico-css/diploma/detalle/" class="tech-link css" target="_blank">CSS</a>
-                <a href="https://platzi.com/@elonlegan/curso/1339-fundamentos-javascript/diploma/detalle/" class="tech-link js" target="_blank">JS</a>
+            <div class="project__details">
+              <h3 class="project__title">Portfolio</h3>
+              <div class="project__tech">
+                <a href="https://platzi.com/@elonlegan/curso/2008-html-css-2020/diploma/detalle/" class="tech-button tech-button--html" target="_blank">HTML</a>
+                <a href="https://platzi.com/@elonlegan/curso/1744-practico-css/diploma/detalle/" class="tech-button tech-button--css" target="_blank">CSS</a>
+                <a href="https://platzi.com/@elonlegan/curso/1339-fundamentos-javascript/diploma/detalle/" class="tech-button tech-button--js" target="_blank">JS</a>
               </div>
-              <p class="project-date">
+              <p class="project__date">
                 <small><strong>Date:</strong> 00/00/2020</small>
               </p>
-              <p class="project-url">
+              <p class="project__url">
                 <small
                   ><strong>You can see it in:</strong>
-                  <a href="#" class="project-link" >
+                  <a href="#" class="project__link" >
                     elonlegan.github.io
                   </a></small
                 >
               </p>
-              <p class="project-description">
+              <p class="project__description">
                 My portfolio is the pinnacle of technology with dark mode, a hamburger button with animation, link to the diplomas of my courses where I show my projects and my skills
               </p>
             </div>
-            <figure class="project-image-container">
+            <figure class="project__image__container">
               <img
-                class="project-image"
+                class="project__image"
                 src="https://i.imgur.com/VLJ5S42.png"
                 alt="proyecto del curso de React Native"
               />
@@ -106,32 +107,32 @@ passion for learning </title>
           </a>
         </article>
         <article class="project">
-          <a href="https://elonlegan.github.io/canvaGames/" target="_blank" class="link-container">
-            <div class="project-details">
-              <h3 class="project-title">CanvaGames</h3>
-              <div class="project-course">
-                <a href="https://platzi.com/@elonlegan/curso/2008-html-css-2020/diploma/detalle/" class="tech-link html" target="_blank">HTML</a>
-                <a href="https://platzi.com/@elonlegan/curso/1744-practico-css/diploma/detalle/" class="tech-link css" target="_blank">CSS</a>
-                <a href="https://platzi.com/@elonlegan/curso/1339-fundamentos-javascript/diploma/detalle/" class="tech-link js" target="_blank">JS</a>
+          <a href="https://elonlegan.github.io/canvaGames/" target="_blank" class="link__container">
+            <div class="project__details">
+              <h3 class="project__title">CanvaGames</h3>
+              <div class="project__tech">
+                <a href="https://platzi.com/@elonlegan/curso/2008-html-css-2020/diploma/detalle/" class="tech-button tech-button--html" target="_blank">HTML</a>
+                <a href="https://platzi.com/@elonlegan/curso/1744-practico-css/diploma/detalle/" class="tech-button tech-button--css" target="_blank">CSS</a>
+                <a href="https://platzi.com/@elonlegan/curso/1339-fundamentos-javascript/diploma/detalle/" class="tech-button tech-button--js" target="_blank">JS</a>
               </div>
-              <p class="project-date">
+              <p class="project__date">
                 <small><strong>Date:</strong> 01/07/2020</small>
               </p>
-              <p class="project-url">
+              <p class="project__url">
                 <small
                   ><strong>You can see it in:</strong>
-                  <a href="https://elonlegan.github.io/canvaGames/" class="project-link" target="_blank">
+                  <a href="https://elonlegan.github.io/canvaGames/" class="project__link" target="_blank">
                     elonlegan.github.io/canvaGames/
                   </a></small
                 >
               </p>
-              <p class="project-description">
+              <p class="project__description">
                 CanvaGames was the result of my work to create the website for retro games. From the UI design to the images, completely created by me
               </p>
             </div>
-            <figure class="project-image-container">
+            <figure class="project__image-container">
               <img
-                class="project-image"
+                class="project__image"
                 src="https://i.imgur.com/fOOvoSR.png"
                 alt="proyecto del curso de React Native"
               />
@@ -144,27 +145,27 @@ passion for learning </title>
             target="_blank"
             class="link-container"
           >
-            <div class="project-details">
-              <h3 class="project-title">My Blog</h3>
-              <div class="project-course">
-                <a href="https://platzi.com/@elonlegan/curso/2008-html-css-2020/diploma/detalle/" class="tech-link html" target="_blank">HTML</a>
-                <a href="https://platzi.com/@elonlegan/curso/1744-practico-css/diploma/detalle/" class="tech-link css" target="_blank">CSS</a>
+            <div class="project__details">
+              <h3 class="project__title">My Blog</h3>
+              <div class="project__tech">
+                <a href="https://platzi.com/@elonlegan/curso/2008-html-css-2020/diploma/detalle/" class="tech-button tech-button--html" target="_blank">HTML</a>
+                <a href="https://platzi.com/@elonlegan/curso/1744-practico-css/diploma/detalle/" class="tech-button tech-button--css" target="_blank">CSS</a>
               </div>
-              <p class="project-date">
+              <p class="project__date">
                 <small><strong>Date:</strong> 01/09/2020</small>
               </p>
-              <p class="project-url">
+              <p class="project__url">
                 <small
-                  ><strong>You can see it in:</strong><a href="https://elonlegan.github.io/my-blog/" class="project-link" target="_blank">
+                  ><strong>You can see it in:</strong><a href="https://elonlegan.github.io/my-blog/" class="projectlink" target="_blank">
                   elonlegan.github.io/my-blog</a></small
                 >
               </p>
-              <p class="project-description">
+              <p class="project__description">
               </p>
             </div>
-            <figure class="project-image-container">
+            <figure class="project__image-container">
               <img
-                class="project-image"
+                class="project__image"
                 src="https://i.imgur.com/jz3PvLf.png"
                 alt="proyecto del curso de React Native"
               />
@@ -177,29 +178,29 @@ passion for learning </title>
             target="_blank"
             class="link-container"
           >
-            <div class="project-details">
-              <h3 class="project-title">Testimonials Slider</h3>
-              <div class="project-course">
-                <a href="https://platzi.com/@elonlegan/curso/2008-html-css-2020/diploma/detalle/" class="tech-link html" target="_blank">HTML</a>
-                <a href="https://platzi.com/@elonlegan/curso/1744-practico-css/diploma/detalle/" class="tech-link css" target="_blank">CSS</a>
-                <a href="https://platzi.com/@elonlegan/curso/1339-fundamentos-javascript/diploma/detalle/" class="tech-link js" target="_blank">JS</a>
+            <div class="project__details">
+              <h3 class="project__title">Testimonials Slider</h3>
+              <div class="project__tech">
+                <a href="https://platzi.com/@elonlegan/curso/2008-html-css-2020/diploma/detalle/" class="tech-button tech-button--html" target="_blank">HTML</a>
+                <a href="https://platzi.com/@elonlegan/curso/1744-practico-css/diploma/detalle/" class="tech-button tech-button--css" target="_blank">CSS</a>
+                <a href="https://platzi.com/@elonlegan/curso/1339-fundamentos-javascript/diploma/detalle/" class="tech-button tech-button--js" target="_blank">JS</a>
               </div>
-              <p class="project-date">
+              <p class="project__date">
                 <small><strong>Date:</strong> 31/08/2020</small>
               </p>
-              <p class="project-url">
+              <p class="project__url">
                 <small
-                  ><strong>You can see it in:</strong><a href="https://elonlegan.github.io/Coding-Bootcamp-Testimonials-Slider/" class="project-link" target="_blank">
+                  ><strong>You can see it in:</strong><a href="https://elonlegan.github.io/Coding-Bootcamp-Testimonials-Slider/" class="project__link" target="_blank">
                   elonlegan.github.io/Article-preview-component</a></small
                 >
               </p>
-              <p class="project-description">
+              <p class="project__description">
                 #PlatziWebChallange - Week #4 Coding Bootcamp Testimonials Slider
               </p>
             </div>
-            <figure class="project-image-container">
+            <figure class="project__image-container">
               <img
-                class="project-image"
+                class="project__image"
                 src="https://i.imgur.com/nLMdB2E.png"
                 alt="proyecto del curso de React Native"
               />
@@ -212,29 +213,29 @@ passion for learning </title>
             target="_blank"
             class="link-container"
           >
-            <div class="project-details">
-              <h3 class="project-title">Article Preview</h3>
-              <div class="project-course">
-                <a href="https://platzi.com/@elonlegan/curso/2008-html-css-2020/diploma/detalle/" class="tech-link html" target="_blank">HTML</a>
-                <a href="https://platzi.com/@elonlegan/curso/1744-practico-css/diploma/detalle/" class="tech-link css" target="_blank">CSS</a>
-                <a href="https://platzi.com/@elonlegan/curso/1339-fundamentos-javascript/diploma/detalle/" class="tech-link js" target="_blank">JS</a>
+            <div class="project__details">
+              <h3 class="project__title">Article Preview</h3>
+              <div class="project__tech">
+                <a href="https://platzi.com/@elonlegan/curso/2008-html-css-2020/diploma/detalle/" class="tech-button tech-button--html" target="_blank">HTML</a>
+                <a href="https://platzi.com/@elonlegan/curso/1744-practico-css/diploma/detalle/" class="tech-button tech-button--css" target="_blank">CSS</a>
+                <a href="https://platzi.com/@elonlegan/curso/1339-fundamentos-javascript/diploma/detalle/" class="tech-button tech-button--js" target="_blank">JS</a>
               </div>
-              <p class="project-date">
+              <p class="project__date">
                 <small><strong>Date:</strong> 31/08/2020</small>
               </p>
-              <p class="project-url">
+              <p class="project__url">
                 <small
-                  ><strong>You can see it in:</strong><a href="https://elonlegan.github.io/Article-preview-component/" class="project-link" target="_blank">
+                  ><strong>You can see it in:</strong><a href="https://elonlegan.github.io/Article-preview-component/" class="project__link" target="_blank">
                   elonlegan.github.io/Article-preview-component</a></small
                 >
               </p>
-              <p class="project-description">
+              <p class="project__description">
                 #PlatziWebChallange - Week #2 Article preview component
               </p>
             </div>
-            <figure class="project-image-container">
+            <figure class="project__image-container">
               <img
-                class="project-image"
+                class="project__image"
                 src="https://i.imgur.com/LINE4jr.png"
                 alt="prouyecto del curso de React Native"
               />
@@ -247,16 +248,16 @@ passion for learning </title>
             target="_blank"
             class="link-container"
           >
-            <div class="project-details">
-              <h3 class="project-title">Four card feature section</h3>
-              <div class="project-course">
-                <a href="https://platzi.com/@elonlegan/curso/2008-html-css-2020/diploma/detalle/" class="tech-link html" target="_blank">HTML</a>
-                <a href="https://platzi.com/@elonlegan/curso/1744-practico-css/diploma/detalle/" class="tech-link css" target="_blank">CSS</a>
+            <div class="project__details">
+              <h3 class="project__title">Four card feature section</h3>
+              <div class="project__tech">
+                <a href="https://platzi.com/@elonlegan/curso/2008-html-css-2020/diploma/detalle/" class="tech-button tech-button--html" target="_blank">HTML</a>
+                <a href="https://platzi.com/@elonlegan/curso/1744-practico-css/diploma/detalle/" class="tech-button tech-button--css" target="_blank">CSS</a>
               </div>
-              <p class="project-date">
+              <p class="project__date">
                 <small><strong>Date:</strong> 21/08/2020</small>
               </p>
-              <p class="project-url">
+              <p class="project__url">
                 <small
                   ><strong>You can see it in:</strong><a href="https://elonlegan.github.io/Four-card-feature-section/" class="project-link" target="_blank">
                     elonlegan.github.io/Four-card-feature-section
@@ -264,13 +265,13 @@ passion for learning </title>
                   </small
                 >
               </p>
-              <p class="project-description">
+              <p class="project__description">
                 #PlatziWebChallange - Week #3 Four card feature section
               </p>
             </div>
-            <figure class="project-image-container">
+            <figure class="project__image-container">
               <img
-                class="project-image"
+                class="project__image"
                 src="https://i.imgur.com/zWJhWtS.png"
                 alt="prouyecto del curso de React Native"
               />
@@ -283,31 +284,31 @@ passion for learning </title>
             target="_blank"
             class="link-container"
           >
-            <div class="project-details">
-              <h3 class="project-title">Huddle landing page</h3>
-              <div class="project-course">
-                <a href="https://platzi.com/@elonlegan/curso/2008-html-css-2020/diploma/detalle/" class="tech-link html" target="_blank">HTML</a>
-                <a href="https://platzi.com/@elonlegan/curso/1744-practico-css/diploma/detalle/" class="tech-link css" target="_blank">CSS</a>
+            <div class="project__details">
+              <h3 class="project__title">Huddle landing page</h3>
+              <div class="project__tech">
+                <a href="https://platzi.com/@elonlegan/curso/2008-html-css-2020/diploma/detalle/" class="tech-button tech-button--html" target="_blank">HTML</a>
+                <a href="https://platzi.com/@elonlegan/curso/1744-practico-css/diploma/detalle/" class="tech-button tech-button--css" target="_blank">CSS</a>
               </div>
-              <p class="project-date">
+              <p class="project__date">
                 <small><strong>Date:</strong> 21/08/2020</small>
               </p>
-              <p class="project-url">
+              <p class="project__url">
                 <small
-                  ><strong>You can see it in:</strong><a href="https://elonlegan.github.io/Huddle-landing-page/" class="project-link" target="_blank">
+                  ><strong>You can see it in:</strong><a href="https://elonlegan.github.io/Huddle-landing-page/" class="project__link" target="_blank">
                     elonlegan.github.io/Huddle-landing-page
                   </a>
                   </small
                 >
               </p>
-              <p class="project-description">
+              <p class="project__description">
                 #PlatziWebChallange - Week #1
                 Huddle landing page with single introductory section
               </p>
             </div>
-            <figure class="project-image-container">
+            <figure class="project__image-container">
               <img
-                class="project-image"
+                class="project__image"
                 src="https://i.imgur.com/m4rElyp.png"
                 alt="prouyecto del curso de React Native"
               />
@@ -317,23 +318,23 @@ passion for learning </title>
       </div>
     </section>
     <div class="container none">
-      <h2 class="event-list-title">Más sobre mi experiencia</h2>
+      <h2 class="title title--event-list">Más sobre mi experiencia</h2>
     </div>
-    <section id="eventos" class="event-list none">
+    <section id="events" class="event-list none">
       <div class="container">
         <article class="event">
-          <figure class="event-imageContainer">
-            <img class="event-image" src="images/platzi-conf.jpg" />
+          <figure class="event__image-container">
+            <img class="event__image" src="images/platzi-conf.jpg" />
           </figure>
-          <div class="event-detail">
-            <h3 class="event-title">PlatziConf México 2018</h3>
-            <p class="event-description">
+          <div class="event__detail">
+            <h3 class="event__title">PlatziConf México 2018</h3>
+            <p class="event__description">
               El evento más grande sobre gente que quiere aprender más de
               internet. En esté evento te comparto como tener una vida de
               constante aprendizaje.
             </p>
             <a
-              class="event-url"
+              class="event__url"
               href="https://www.youtube.com/watch?v=BIS7cWGgJg0"
               target="_blank"
               >Ver Plática</a
@@ -341,18 +342,18 @@ passion for learning </title>
           </div>
         </article>
         <article class="event">
-          <figure class="event-imageContainer">
-            <img class="event-image" src="images/platzi-conf.jpg"  />
+          <figure class="event__image-container">
+            <img class="event__image" src="images/platzi-conf.jpg"  />
           </figure>
-          <div class="event-detail">
-            <h3 class="event-title">PlatziConf México 2018</h3>
-            <p class="event-description">
+          <div class="event__detail">
+            <h3 class="event__title">PlatziConf México 2018</h3>
+            <p class="event__description">
               El evento más grande sobre gente que quiere aprender más de
               internet. En esté evento te comparto como tener una vida de
               constante aprendizaje.
             </p>
             <a
-              class="event-url"
+              class="event__url"
               href="https://www.youtube.com/watch?v=BIS7cWGgJg0"
               target="_blank"
               >Ver Plática</a
@@ -360,18 +361,18 @@ passion for learning </title>
           </div>
         </article>
         <article class="event">
-          <figure class="event-imageContainer">
-            <img class="event-image" src="images/platzi-conf.jpg"  />
+          <figure class="event__image-container">
+            <img class="event__image" src="images/platzi-conf.jpg"  />
           </figure>
-          <div class="event-detail">
-            <h3 class="event-title">PlatziConf México 2018</h3>
-            <p class="event-description">
+          <div class="event__detail">
+            <h3 class="event__title">PlatziConf México 2018</h3>
+            <p class="event__description">
               El evento más grande sobre gente que quiere aprender más de
               internet. En esté evento te comparto como tener una vida de
               constante aprendizaje.
             </p>
             <a
-              class="event-url"
+              class="event__url"
               href="https://www.youtube.com/watch?v=BIS7cWGgJg0"
               target="_blank"
               >Ver Plática</a
@@ -379,18 +380,18 @@ passion for learning </title>
           </div>
         </article>
         <article class="event">
-          <figure class="event-imageContainer">
-            <img class="event-image" src="images/platzi-conf.jpg"  />
+          <figure class="event__image-container">
+            <img class="event__image" src="images/platzi-conf.jpg"  />
           </figure>
-          <div class="event-detail">
-            <h3 class="event-title">PlatziConf México 2018</h3>
-            <p class="event-description">
+          <div class="event__detail">
+            <h3 class="event__title">PlatziConf México 2018</h3>
+            <p class="event__description">
               El evento más grande sobre gente que quiere aprender más de
               internet. En esté evento te comparto como tener una vida de
               constante aprendizaje.
             </p>
             <a
-              class="event-url"
+              class="event__url"
               href="https://www.youtube.com/watch?v=BIS7cWGgJg0"
               target="_blank"
               >Ver Plática</a
@@ -400,31 +401,31 @@ passion for learning </title>
       </div>
     </section>
     <div class="container">
-      <h2 class="event-list-title">skills</h2>
+      <h2 class="title title--skills">skills</h2>
     </div>
-    <section class="skills-section" id="skills">
-      <div class="container" id="skill">
-          <div class="skills-links" id="uno">
-            <div class="skill-link-container">
-              <a href="https://platzi.com/@elonlegan/curso/1557-git-github/diploma/detalle/" class="skill-link" id="skill1" target="_blank">Git</a
-              ><a href="https://platzi.com/@elonlegan/curso/2008-html-css-2020/diploma/detalle/" class="skill-link" id="skill2" target="_blank">HTML</a>
+    <section class="skills" id="skills">
+      <div class="container container--link" >
+          <div class="skills__container" id="uno">
+            <div class="skill__container__row">
+              <a href="https://platzi.com/@elonlegan/curso/1557-git-github/diploma/detalle/" class="skill-button" id="skill1" target="_blank">Git</a
+              ><a href="https://platzi.com/@elonlegan/curso/2008-html-css-2020/diploma/detalle/" class="skill-button" id="skill2" target="_blank">HTML</a>
             </div>
-            <div class="skill-link-container">
-              <a href="https://platzi.com/@elonlegan/curso/1789-asincronismo-js/diploma/detalle/" class="skill-link" id="skill6" target="_blank">Asynchronous with JavaScript</a>
+            <div class="skill__container__row">
+              <a href="https://platzi.com/@elonlegan/curso/1789-asincronismo-js/diploma/detalle/" class="skill-button" id="skill6" target="_blank">Asynchronous with JavaScript</a>
             </div>
-            <div class="skill-link-container">
-              <a href="https://platzi.com/@elonlegan/curso/1098-ingenieria/diploma/detalle/" class="skill-link" id="skill4" target="_blank">Ingeniería de Software</a
-                ><a href="https://platzi.com/@elonlegan/curso/1867-devtools/diploma/detalle/" class="skill-link" id="skill5" target="_blank">Debugging DevTools</a>
+            <div class="skill__container__row">
+              <a href="https://platzi.com/@elonlegan/curso/1098-ingenieria/diploma/detalle/" class="skill-button" id="skill4" target="_blank">Ingeniería de Software</a
+                ><a href="https://platzi.com/@elonlegan/curso/1867-devtools/diploma/detalle/" class="skill-button" id="skill5" target="_blank">Debugging DevTools</a>
               </div>
-              <div class="skill-link-container">
-                <a href="https://platzi.com/@elonlegan/curso/1744-practico-css/diploma/detalle/" class="skill-link" id="skill3" target="_blank">CSS</a>
+              <div class="skill__container__row">
+                <a href="https://platzi.com/@elonlegan/curso/1744-practico-css/diploma/detalle/" class="skill-button" id="skill3" target="_blank">CSS</a>
               </div>
-              <div class="skill-link-container">
-                <a href="https://platzi.com/@elonlegan/curso/1749-gestion-tiempo/diploma/detalle/" class="skill-link" id="skill7" target="_blank">Effective Time Management</a
-                  ><a href="https://platzi.com/@elonlegan/curso/1339-fundamentos-javascript/diploma/detalle/" class="skill-link" id="skill8" target="_blank">JavaScript</a>
+              <div class="skill__container__row">
+                <a href="https://platzi.com/@elonlegan/curso/1749-gestion-tiempo/diploma/detalle/" class="skill-button" id="skill7" target="_blank">Effective Time Management</a
+                  ><a href="https://platzi.com/@elonlegan/curso/1339-fundamentos-javascript/diploma/detalle/" class="skill-button" id="skill8" target="_blank">JavaScript</a>
             </div>
-            <div class="skill-link-container">
-              <a href="" class="skill-link" id="skill9" >Node.Js</a>
+            <div class="skill__container__row">
+              <a href="" class="skill-button" id="skill9" >Node.Js</a>
             </div>
           </div>
           <figure class="skill-image-container">
@@ -435,27 +436,27 @@ passion for learning </title>
               class="skill-image"
             />
           </figure>
-          <div class="skills-links" id="dos">
-            <div class="skill-link-container">
-              <a href="https://platzi.com/@elonlegan/curso/1807-scope/diploma/detalle/" class="skill-link" id="skill10" target="_blank">Closures and Scope in Javascript</a
-              ><a href="https://platzi.com/@elonlegan/curso/1420-sistemas-diseno/diploma/detalle/" class="skill-link" id="skill11" target="_blank">Design Systems</a>
+          <div class="skills__container" id="dos">
+            <div class="skill__container__row">
+              <a href="https://platzi.com/@elonlegan/curso/1807-scope/diploma/detalle/" class="skill-button" id="skill10" target="_blank">Closures and Scope in Javascript</a
+              ><a href="https://platzi.com/@elonlegan/curso/1420-sistemas-diseno/diploma/detalle/" class="skill-button" id="skill11" target="_blank">Design Systems</a>
             </div>
-            <div class="skill-link-container">
-              <a href="https://platzi.com/@elonlegan/curso/1815-ecmascript-6/diploma/detalle/" class="skill-link" id="skill12" target="_blank">ECMAScript 6+</a>
+            <div class="skill__container__row">
+              <a href="https://platzi.com/@elonlegan/curso/1815-ecmascript-6/diploma/detalle/" class="skill-button" id="skill12" target="_blank">ECMAScript 6+</a>
             </div>
-            <div class="skill-link-container">
-              <a href="https://platzi.com/@elonlegan/curso/1350-html5-css3/diploma/detalle/" class="skill-link" id="skill13" target="_blank">Web Development</a
-              ><a href="https://platzi.com/@elonlegan/curso/1229-css-grid-layout/diploma/detalle/" class="skill-link" id="skill14" target="_blank">CSS Grid</a>
+            <div class="skill__container__row">
+              <a href="https://platzi.com/@elonlegan/curso/1350-html5-css3/diploma/detalle/" class="skill-button" id="skill13" target="_blank">Web Development</a
+              ><a href="https://platzi.com/@elonlegan/curso/1229-css-grid-layout/diploma/detalle/" class="skill-button" id="skill14" target="_blank">CSS Grid</a>
             </div>
-            <div class="skill-link-container">
-              <a href="https://platzi.com/@elonlegan/ruta/13-idioma-ingles/diploma/detalle/" class="skill-link" id="skill15" target="_blank">English</a>
+            <div class="skill__container__row">
+              <a href="https://platzi.com/@elonlegan/ruta/13-idioma-ingles/diploma/detalle/" class="skill-button" id="skill15" target="_blank">English</a>
             </div>
-            <div class="skill-link-container">
-              <a href="https://platzi.com/@elonlegan/curso/1362-responsive-design/diploma/detalle/" class="skill-link" id="skill16" target="_blank">Responsive Design</a
-              ><a href="https://platzi.com/@elonlegan/curso/1802-accesibilidad-web/diploma/detalle/" class="skill-link" id="skill17" target="_blank">Web Accessibility</a>
+            <div class="skill__container__row">
+              <a href="https://platzi.com/@elonlegan/curso/1362-responsive-design/diploma/detalle/" class="skill-button" id="skill16" target="_blank">Responsive Design</a
+              ><a href="https://platzi.com/@elonlegan/curso/1802-accesibilidad-web/diploma/detalle/" class="skill-button" id="skill17" target="_blank">Web Accessibility</a>
             </div>
-            <div class="skill-link-container">
-              <a href="https://platzi.com/@elonlegan/curso/1798-javascript-navegador/diploma/detalle/" class="skill-link" id="18" target="_blank">JavaScript Engine (V8)</a>
+            <div class="skill__container__row">
+              <a href="https://platzi.com/@elonlegan/curso/1798-javascript-navegador/diploma/detalle/" class="skill-button" id="18" target="_blank">JavaScript Engine (V8)</a>
             </div>
           </div>
         </section>
@@ -463,31 +464,31 @@ passion for learning </title>
     </section>
     <section id="contacto" class="contact">
       <div class="container">
-        <div class="email">
-          <h3>We create something together?</h3>
-          <a href="mailto:elonlegan@gmail.com" class="mail-link"
+        <div class="contact__email">
+          <h3 class="contact__email__title">We create something together?</h3>
+          <a href="mailto:elonlegan@gmail.com" class="contact__email__link"
             >Send me an e-mail</a
           >
         </div>
         <div class="social">
           <a
             href="https://twitter.com/elonlegan"
-            class="social-link twitter"
+            class="social__link social__link--twitter"
             target="_blank"
           ></a>
           <a
             href="https://facebook.com/elonlegan"
-            class="social-link facebook"
+            class="social__link social__link--facebook"
             target="_blank"
           ></a>
           <a
             href="https://github.com/elonlegan"
-            class="social-link github"
+            class="social__link social__link--github"
             target="_blank"
           ></a>
           <a
             href="https://instagram.com/elonlegan"
-            class="social-link instagram"
+            class="social__link social__link--instagram"
             target="_blank"
           ></a>
         </div>
