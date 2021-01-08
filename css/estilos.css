@@ -247,9 +247,14 @@ figure {
   font-size: 0.8em;
 }
 
+.project-image-container {
+  display: flex;
+}
+
 .project-image {
   width: 100%;
   max-width: 500px;
+  margin: 0 auto;
 }
 
 .project:last-child {
