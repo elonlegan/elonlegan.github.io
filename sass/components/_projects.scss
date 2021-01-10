@@ -1,0 +1,56 @@
+.project {
+  @include card(var(--background-project)) ;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 20px;
+
+  &:hover {
+    box-shadow: 1px 1px 10px 1px $color-principal;
+    cursor: pointer;
+  }
+  
+  &__title {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  &__course,
+  &__date,
+  &__url {
+    margin: 0.4em 0;
+  }
+  
+  &__tech {
+    font-family: $font-title;
+  }
+
+  strong {
+    font-family: $font-title;
+    color: $color-principal;
+  }
+  
+  &__link {
+    color: var(--font-color);
+    transition: none;
+  }
+  
+  &__link:hover {
+    color: $color-principal;
+  }
+  
+  &__description {
+    font-size: 0.8em;
+  }
+  
+  &__image__container {
+    margin: 0;
+    display: flex;
+  }
+  
+  &__image {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}

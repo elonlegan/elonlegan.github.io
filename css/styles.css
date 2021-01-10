@@ -18,7 +18,8 @@
 /* Media Queries Mixin
 **********************/
 * {
-  transition: 0.3s ease all;
+  transition-property: background-color, color;
+  transition: 0.3s ease;
 }
 
 html {
@@ -178,51 +179,50 @@ h1 {
   transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.tech-link.js {
+.tech-button {
+  margin-right: 5px;
+  padding: 0px 3%;
+  color: var(--font-color);
+  background-color: var(--principal-color);
+  border-radius: 10px;
+  text-align: center;
+}
+.tech-button--js {
   color: #000000;
   background-color: #f7df1e;
 }
-
-.tech-link.html {
+.tech-button--html {
   color: #ffffff;
   background-color: #ff4500;
 }
-
-.tech-link.css {
+.tech-button--css {
   color: #ffffff;
   background-color: #1f5faa;
 }
-
-.tech-link.nodejs {
+.tech-button--nodejs {
   color: #659a60;
   background-color: #f7f7f7;
   border: 1px solid;
 }
-
-.tech-link.angular {
+.tech-button--angular {
   color: #fff;
   background-color: #dd0031;
 }
-
-.tech-link.react {
+.tech-button--react {
   color: #03d6f6;
   background-color: #232325;
 }
-
-.tech-link.svelte {
+.tech-button--svelte {
   color: #f73c00;
   background-color: #fff;
   border: 1px solid;
 }
-
-.tech-link.vue {
+.tech-button--vue {
   color: #fff;
   background: linear-gradient(90deg, #00b37b 0%, #2d465c 100%);
 }
 
-.container {
-  margin: 0 15px;
-  max-width: 1024px;
+.container-size, .container--link {
   flex: 1;
   display: inherit;
   justify-content: inherit;
@@ -230,16 +230,17 @@ h1 {
   height: inherit;
   flex-wrap: inherit;
   grid-template-areas: inherit;
-}
-
-.link-container {
-  margin: 0 auto;
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
   height: inherit;
   flex-wrap: inherit;
   color: inherit;
+}
+
+.container-size {
+  margin: 0 15px;
+  max-width: 1024px;
 }
 
 .logo {
@@ -343,6 +344,53 @@ h1 {
   background-image: linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
 }
 
+.project {
+  background-color: var(--background-project);
+  box-shadow: var(--box-shadow);
+  color: var(--font-color);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 20px;
+}
+.project:hover {
+  box-shadow: 1px 1px 10px 1px #026fff;
+  cursor: pointer;
+}
+.project__title {
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.project__course, .project__date, .project__url {
+  margin: 0.4em 0;
+}
+.project__tech {
+  font-family: "Fjalla One", sans-serif;
+}
+.project strong {
+  font-family: "Fjalla One", sans-serif;
+  color: #026fff;
+}
+.project__link {
+  color: var(--font-color);
+  transition: none;
+}
+.project__link:hover {
+  color: #026fff;
+}
+.project__description {
+  font-size: 0.8em;
+}
+.project__image__container {
+  margin: 0;
+  display: flex;
+}
+.project__image {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 .header {
   background-color: var(--background-hero);
 }
@@ -386,82 +434,10 @@ h1 {
   margin: 0 0 1.2rem 0;
 }
 
-.project,
-.event {
-  background-color: var(--background-card);
-  box-shadow: var(--box-shadow);
-  color: var(--font-color);
-}
-
-.project {
-  background-color: var(--background-project);
-  border-radius: 10px;
-  margin-bottom: 15px;
-  padding: 20px;
-}
-
-.project:hover {
-  box-shadow: 1px 1px 10px 1px var(--principal-color);
-  cursor: pointer;
-}
-
-.project-title {
-  font-size: 1.2em;
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.project-course,
-.project-date,
-.project-url {
-  margin: 0.4em 0;
-}
-
-.project-course {
-  font-family: var(--font-title);
-}
-
-.tech-link {
-  margin-right: 5px;
-  padding: 0px 3%;
-  color: var(--font-color);
-  background-color: var(--principal-color);
-  border-radius: 10px;
-  text-align: center;
-}
-
-.project strong {
-  font-family: var(--font-title);
-  color: var(--principal-color);
-}
-
-.project-link {
-  color: var(--font-color);
-}
-
-.project-link:hover {
-  color: var(--principal-color);
-}
-
-.project-description {
-  font-size: 0.8em;
-}
-
-.project-image-container {
-  display: flex;
-}
-
-.project-image {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
 .project:last-child {
   margin-bottom: 0;
 }
 
-/*----------------------------------------PROJECTS*/
 .skills-section {
   display: flex;
   margin-top: 20px;

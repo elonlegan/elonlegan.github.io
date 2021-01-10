@@ -1,4 +1,5 @@
 @import "utilities/variables";
+@import "utilities/mixins";
 @import "utilities/breakpoints";
 
 @import "base/reset";
@@ -11,6 +12,7 @@
 @import "components/navs";
 @import "components/dark-mode-button";
 @import "components/switches";
+@import "components/projects";
 
 
 @import "layout/header";
@@ -20,6 +22,7 @@
 @import "layout/skills";
 @import "layout/contact";
 @import "layout/footer";
+
 .none{
   display: none;
 }

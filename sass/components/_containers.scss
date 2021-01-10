@@ -1,6 +1,4 @@
-.container {
-  margin: 0 15px;
-  max-width: 1024px;
+%container {
   flex: 1;
   display: inherit;
   justify-content: inherit;
@@ -8,14 +6,20 @@
   height: inherit;
   flex-wrap: inherit;
   grid-template-areas: inherit;
-}
-
-.link-container {
-  margin: 0 auto;
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
   height: inherit;
   flex-wrap: inherit;
   color: inherit;
+}
+
+.container--link {
+  @extend %container;
+}
+
+.container-size{
+  @extend %container;
+  margin: 0 15px;
+  max-width: 1024px;
 }
