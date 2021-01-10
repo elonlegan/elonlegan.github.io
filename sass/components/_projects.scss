@@ -15,7 +15,6 @@
     margin-bottom: 10px;
   }
   
-  &__course,
   &__date,
   &__url {
     margin: 0.4em 0;
@@ -23,6 +22,9 @@
   
   &__tech {
     font-family: $font-title;
+    .tech-button{
+      margin-right: 5px;
+    }
   }
 
   strong {

@@ -20,3 +20,12 @@ h1 {
   line-height: 1.5;
   letter-spacing: -0.2px;
 }
+
+.title{
+    color: $color-principal;
+    text-transform: uppercase;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0 0 1.2rem 0;
+}

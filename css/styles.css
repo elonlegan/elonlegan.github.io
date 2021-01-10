@@ -73,6 +73,15 @@ h1 {
   letter-spacing: -0.2px;
 }
 
+.title {
+  color: #026fff;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0 0 1.2rem 0;
+}
+
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -179,47 +188,54 @@ h1 {
   transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.tech-button {
-  margin-right: 5px;
+.tech-button, .tech-button--skill, .tech-button--vue, .tech-button--svelte, .tech-button--react, .tech-button--angular, .tech-button--nodejs, .tech-button--css, .tech-button--html, .tech-button--js {
   padding: 0px 3%;
-  color: var(--font-color);
-  background-color: var(--principal-color);
+  color: white;
+  background-color: #026fff;
   border-radius: 10px;
   text-align: center;
 }
+
 .tech-button--js {
   color: #000000;
   background-color: #f7df1e;
 }
+
 .tech-button--html {
-  color: #ffffff;
   background-color: #ff4500;
 }
+
 .tech-button--css {
-  color: #ffffff;
   background-color: #1f5faa;
 }
+
 .tech-button--nodejs {
   color: #659a60;
   background-color: #f7f7f7;
   border: 1px solid;
 }
+
 .tech-button--angular {
-  color: #fff;
   background-color: #dd0031;
 }
+
 .tech-button--react {
   color: #03d6f6;
   background-color: #232325;
 }
+
 .tech-button--svelte {
   color: #f73c00;
   background-color: #fff;
   border: 1px solid;
 }
+
 .tech-button--vue {
-  color: #fff;
   background: linear-gradient(90deg, #00b37b 0%, #2d465c 100%);
+}
+
+.tech-button--skill {
+  height: fit-content;
 }
 
 .container-size, .container--link {
@@ -361,11 +377,14 @@ h1 {
   margin-top: 0;
   margin-bottom: 10px;
 }
-.project__course, .project__date, .project__url {
+.project__date, .project__url {
   margin: 0.4em 0;
 }
 .project__tech {
   font-family: "Fjalla One", sans-serif;
+}
+.project__tech .tech-button, .project__tech .tech-button--js, .project__tech .tech-button--html, .project__tech .tech-button--css, .project__tech .tech-button--nodejs, .project__tech .tech-button--angular, .project__tech .tech-button--react, .project__tech .tech-button--svelte, .project__tech .tech-button--vue, .project__tech .tech-button--skill {
+  margin-right: 5px;
 }
 .project strong {
   font-family: "Fjalla One", sans-serif;
@@ -438,49 +457,25 @@ h1 {
   margin-bottom: 0;
 }
 
-.skills-section {
-  display: flex;
+.skills {
   margin-top: 20px;
 }
-
-.container#skill {
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: 100%;
-  grid-template-areas: "links1" "img" "link2";
-  margin-bottom: 20px;
-}
-
-.skills-links {
-  margin-top: 10px;
-  width: 100%;
+.skills__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   height: 33vh;
 }
-
-.skill-link-container {
+.skills__container .tech-button, .skills__container .tech-button--js, .skills__container .tech-button--html, .skills__container .tech-button--css, .skills__container .tech-button--nodejs, .skills__container .tech-button--angular, .skills__container .tech-button--react, .skills__container .tech-button--svelte, .skills__container .tech-button--vue, .skills__container .tech-button--skill {
+  margin: auto 20px;
+}
+.skills__image {
   display: flex;
-  justify-content: space-around;
-  height: calc(100% / 6);
-}
-
-.skill-link {
-  height: fit-content;
-  padding: 0px 3%;
-  color: var(--color);
-  background-color: var(--principal-color);
-  border-radius: 10px;
-  text-align: center;
-}
-
-.skill-image-container {
-  grid-area: img;
   margin: 0 auto;
   height: 33vh;
+  justify-content: center;
 }
-
-.skill-image {
+.skills__image__img {
   height: 100%;
 }
 
