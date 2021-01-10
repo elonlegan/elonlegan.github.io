@@ -1,14 +1,8 @@
 :root {
-  --principal-color: #026fff;
-  --principal-color-opacity: #026fffdb;
   --background-hero: #1d252c;
   --background-card: #f4fbff;
   --background-project: white;
   --background: #fafafa;
-  --font-color: black;
-  --color: white;
-  --font-title: "Fjalla One", sans-serif;
-  --font-regular: "Source Sans Pro", sans-serif;
   --box-shadow: 1px 1px 10px 1px lightgrey;
 }
 
@@ -18,18 +12,17 @@
   --background-project: #252b43;
   --background: #1d2029;
   --font-color: white;
-  --color: white;
-  --font-title: "Fjalla One", sans-serif;
-  --font-regular: "Source Sans Pro", sans-serif;
   --box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.75);
 }
 
-html{
+/* Media Queries Mixin
+**********************/
+html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-regular);
+  font-family: "Source Sans Pro", sans-serif;
   margin: 0;
   background-color: var(--background);
 }
@@ -40,7 +33,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-title);
+  font-family: "Fjalla One", sans-serif;
   font-weight: normal;
 }
 
@@ -48,17 +41,18 @@ h1 {
   font-size: 1.2em;
   line-height: 1.5;
   letter-spacing: -0.2px;
-  color: var(--color);
+  color: #fff;
   margin: 0;
   position: relative;
   z-index: 2;
 }
 
 h1 strong {
-  color: var(--principal-color);
+  color: #026fff;
 }
+
 h2 {
-  color: var(--principal-color);
+  color: #026fff;
   text-transform: uppercase;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
@@ -77,42 +71,214 @@ ul {
   list-style: none;
 }
 
-/*----------------------------------------HEADER*/
-/*------------------ burger button*/
-
-.hamburger {
-  display: inline-block;
+body {
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-/*------------------ burger button*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fjalla One", sans-serif;
+  font-weight: normal;
+}
 
-.header {
-  background-color: var(--background-hero);
-  color: var(--color);
+h1 {
+  font-size: 1.2em;
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+}
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  outline: none;
+  height: 45px;
+  border-radius: 50%;
+  z-index: 4;
+  position: fixed;
+  left: 5px;
+  top: 5px;
+  padding: 10px 10px;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: #171717;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #fff;
+}
+
+.hamburger-box {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 25px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin .hamburger-inner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+
+.hamburger--spin .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin.is-active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.tech-link.js {
+  color: #000000;
+  background-color: #f7df1e;
+}
+
+.tech-link.html {
+  color: #ffffff;
+  background-color: #ff4500;
+}
+
+.tech-link.css {
+  color: #ffffff;
+  background-color: #1f5faa;
+}
+
+.tech-link.nodejs {
+  color: #659a60;
+  background-color: #f7f7f7;
+  border: 1px solid;
+}
+
+.tech-link.angular {
+  color: #fff;
+  background-color: #dd0031;
+}
+
+.tech-link.react {
+  color: #03d6f6;
+  background-color: #232325;
+}
+
+.tech-link.svelte {
+  color: #f73c00;
+  background-color: #fff;
+  border: 1px solid;
+}
+
+.tech-link.vue {
+  color: #fff;
+  background: linear-gradient(90deg, #00b37b 0%, #2d465c 100%);
+}
+
+.container {
+  margin: 0 15px;
+  max-width: 1024px;
+  flex: 1;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+  grid-template-areas: inherit;
+}
+
+.link-container {
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+  color: inherit;
 }
 
 .logo {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
 }
-
-.logo img {
+.logo__image {
   border-radius: 50%;
   margin: 5px 0;
 }
-
-.logo span {
+.logo__text {
+  color: white;
   margin-left: 10px;
   font-family: "Fjalla One", sans-serif;
   font-size: 24px;
 }
 
-figure {
-  margin: 0;
-}
-
-.menu {
+.nav {
   box-sizing: border-box;
   padding: 20px;
   position: fixed;
@@ -125,16 +291,18 @@ figure {
   z-index: 3;
   background: #171717;
   transition: 0.3s;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  height: initial;
 }
-.menu.is-active {
+.nav.is-active {
   left: 0;
 }
-
-.header ol {
+.nav__list {
   width: 100%;
 }
-
-.header a {
+.nav__link {
   align-items: center;
   height: 40px;
   border-bottom: 1px solid;
@@ -144,46 +312,64 @@ figure {
   color: var(--color);
 }
 
-.header ol li#li-switch {
+.dark-mode {
   padding: 0.5em 0;
   font-size: 1.5em;
   border-bottom: 1px solid;
 }
-
-.dark-paragraph {
+.dark-mode__text {
   margin: 0;
   padding-right: 10px;
 }
 
-/*----------------------------------------HEADER*/
-
-/*----------------------------------------HERO*/
-
-.hero {
-  background-color: var(--background-hero);
-  box-shadow: inset 0px 4px 7px 0px black;
-  transition: 0.3s ease all;
-  padding: 3em 1em;
+.switch {
+  background: #5f616d;
+  border-radius: 1000px;
+  border: none;
   position: relative;
-  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  padding: 5px;
+  width: 80px;
 }
-
-.hero-image {
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
   position: absolute;
-  right: 0;
-  bottom: 0;
-  top: 0;
+  background: #f1f1f1;
+  top: 5px;
+  left: 5px;
+  right: unset;
+  border-radius: 100px;
+  transition: 0.3s ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.switch.active::after {
+  right: 5px;
+  left: unset;
+}
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
 }
 
-/*----------------------------------------HERO*/
+.switch--dark-mode.active {
+  background-image: linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
+}
 
-/*----------------------------------------PORTFOLIO*/
+.header {
+  background-color: var(--background-hero);
+}
 
 .portfolio {
   padding: 1.2rem 0;
 }
-
-/*----------------------------------------PROJECTS*/
 
 .project,
 .event {
@@ -262,51 +448,6 @@ figure {
 }
 
 /*----------------------------------------PROJECTS*/
-/*----------------------------------------PORTFOLIO*/
-
-/*----------------------------------------EVENTS*/
-.event {
-  width: auto;
-  flex-shrink: initial;
-  margin: 0 0 20px 0;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.event-imageContainer {
-  font-size: 0;
-}
-
-.event-detail {
-  margin: -40px 20px 0 20px;
-  background-color: var(--background);
-  position: relative;
-  padding: 20px;
-  text-align: center;
-}
-
-.event img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.event-description {
-  text-align: left;
-}
-
-.event-url {
-  color: var(--principal-color);
-  border: 1px solid;
-  padding: 5px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-/*----------------------------------------EVENTS*/
-
-/*----------------------------------------SKILLS*/
-
 .skills-section {
   display: flex;
   margin-top: 20px;
@@ -318,10 +459,7 @@ figure {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: 100%;
-  grid-template-areas:
-    "links1"
-    "img"
-    "link2";
+  grid-template-areas: "links1" "img" "link2";
   margin-bottom: 20px;
 }
 
@@ -355,10 +493,6 @@ figure {
 .skill-image {
   height: 100%;
 }
-
-/*----------------------------------------SKILLS*/
-
-/*----------------------------------------CONTACT*/
 
 .contact {
   padding: 1.5em 0;
@@ -416,20 +550,21 @@ figure {
 .social-link.twitter {
   background-image: url(../images/twitter.svg);
 }
+
 .social-link.facebook {
   background-image: url(../images/facebook.svg);
 }
+
 .social-link.github {
   background-image: url(../images/github.svg);
 }
+
 .social-link.instagram {
   background-image: url(../images/instagram.svg);
 }
 
 /*----------------------------------------CONTACT*/
-
 /*----------------------------------------FOOOTER*/
-
 .footer {
   text-align: center;
   border: 1px solid transparent;
@@ -447,32 +582,4 @@ figure {
 
 /*----------------------------------------FOOOTER*/
 
-/*----------------------------------------CONTAINER*/
-.container {
-  margin: 0 15px;
-  max-width: 1024px;
-  flex: 1;
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  height: inherit;
-  flex-wrap: inherit;
-  grid-template-areas: inherit;
-}
-
-.project .link-container {
-  margin: 0 auto;
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  height: inherit;
-  flex-wrap: inherit;
-  color: inherit;
-}
-/*----------------------------------------CONTAINER*/
-
-/*----------------------------------------NONE*/
-
-.none {
-  display: none !important;
-}
+/*# sourceMappingURL=styles.css.map */

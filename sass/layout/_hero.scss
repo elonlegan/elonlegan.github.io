@@ -1,0 +1,15 @@
+.hero {
+  background-color: var(--background-hero);
+  box-shadow: inset 0px 4px 7px 0px black;
+  transition: 0.3s ease all;
+  padding: 3em 1em;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}

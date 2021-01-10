@@ -1,4 +1,4 @@
-const btnSwitch = document.querySelector("#switch");
+const btnSwitch = document.querySelector(".switch--dark-mode");
 const groot = document.querySelector(":root");
 
 btnSwitch.addEventListener("click", () => 
