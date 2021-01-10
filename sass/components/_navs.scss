@@ -12,9 +12,6 @@
   background: #171717;
   transition: 0.3s;
   color: $nav-font-color;
-  display: flex;
-  align-items: center;
-  height: initial;
   &.is-active {
     left: 0;
   }

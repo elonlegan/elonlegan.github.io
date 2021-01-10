@@ -1,3 +1,6 @@
+*{
+  transition: 0.3s ease all;
+}
 
 html{
   scroll-behavior: smooth;
@@ -19,28 +22,6 @@ h6 {
   font-weight: normal;
 }
 
-h1 {
-  font-size: 1.2em;
-  line-height: 1.5;
-  letter-spacing: -0.2px;
-  color: $hero-title-color;
-  margin: 0;
-  position: relative;
-  z-index: 2;
-}
-
-h1 strong {
-  color: $color-principal;
-}
-h2 {
-  color: $color-principal;
-  text-transform: uppercase;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: bold;
-  font-size: 1.2em;
-  margin: 0 0 1.2rem 0;
-}
-
 a {
   text-decoration: none;
 }
@@ -51,5 +32,7 @@ ul {
   padding: 0;
   list-style: none;
 }
+
+
 
 

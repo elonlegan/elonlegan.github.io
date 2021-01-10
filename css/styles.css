@@ -17,6 +17,10 @@
 
 /* Media Queries Mixin
 **********************/
+* {
+  transition: 0.3s ease all;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -35,29 +39,6 @@ h5,
 h6 {
   font-family: "Fjalla One", sans-serif;
   font-weight: normal;
-}
-
-h1 {
-  font-size: 1.2em;
-  line-height: 1.5;
-  letter-spacing: -0.2px;
-  color: #fff;
-  margin: 0;
-  position: relative;
-  z-index: 2;
-}
-
-h1 strong {
-  color: #026fff;
-}
-
-h2 {
-  color: #026fff;
-  text-transform: uppercase;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: bold;
-  font-size: 1.2em;
-  margin: 0 0 1.2rem 0;
 }
 
 a {
@@ -292,9 +273,6 @@ h1 {
   background: #171717;
   transition: 0.3s;
   color: #fff;
-  display: flex;
-  align-items: center;
-  height: initial;
 }
 .nav.is-active {
   left: 0;
@@ -316,6 +294,8 @@ h1 {
   padding: 0.5em 0;
   font-size: 1.5em;
   border-bottom: 1px solid;
+  display: flex;
+  align-items: center;
 }
 .dark-mode__text {
   margin: 0;
@@ -367,8 +347,43 @@ h1 {
   background-color: var(--background-hero);
 }
 
+.hero {
+  background-color: var(--background-hero);
+  box-shadow: inset 0px 4px 7px 0px black;
+  transition: 0.3s ease all;
+  padding: 3em 1em;
+  position: relative;
+  overflow: hidden;
+}
+.hero__image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+.hero__title {
+  font-size: 1.2em;
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+  color: #fff;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+.hero__title__strong {
+  color: #026fff;
+}
+
 .portfolio {
   padding: 1.2rem 0;
+}
+.portfolio__title {
+  color: #026fff;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0 0 1.2rem 0;
 }
 
 .project,
@@ -376,7 +391,6 @@ h1 {
   background-color: var(--background-card);
   box-shadow: var(--box-shadow);
   color: var(--font-color);
-  transition: 0.3s ease all;
 }
 
 .project {
@@ -581,5 +595,8 @@ h1 {
 }
 
 /*----------------------------------------FOOOTER*/
+.none {
+  display: none;
+}
 
 /*# sourceMappingURL=styles.css.map */

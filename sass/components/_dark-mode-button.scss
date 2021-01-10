@@ -3,6 +3,8 @@
   padding: 0.5em 0;
   font-size: 1.5em;
   border-bottom: 1px solid;
+  display: flex;
+  align-items: center;
   &__text {
     margin: 0;
     padding-right: 10px;
