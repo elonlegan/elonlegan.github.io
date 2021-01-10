@@ -410,6 +410,82 @@ h1 {
   margin: 0 auto;
 }
 
+.project {
+  background-color: var(--background-project);
+  box-shadow: var(--box-shadow);
+  color: var(--font-color);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 20px;
+}
+.project:hover {
+  box-shadow: 1px 1px 10px 1px #026fff;
+  cursor: pointer;
+}
+.project__title {
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.project__date, .project__url {
+  margin: 0.4em 0;
+}
+.project__tech {
+  font-family: "Fjalla One", sans-serif;
+}
+.project__tech .tech-button, .project__tech .tech-button--js, .project__tech .tech-button--html, .project__tech .tech-button--css, .project__tech .tech-button--nodejs, .project__tech .tech-button--angular, .project__tech .tech-button--react, .project__tech .tech-button--svelte, .project__tech .tech-button--vue, .project__tech .tech-button--skill {
+  margin-right: 5px;
+}
+.project strong {
+  font-family: "Fjalla One", sans-serif;
+  color: #026fff;
+}
+.project__link {
+  color: var(--font-color);
+  transition: none;
+}
+.project__link:hover {
+  color: #026fff;
+}
+.project__description {
+  font-size: 0.8em;
+}
+.project__image__container {
+  margin: 0;
+  display: flex;
+}
+.project__image {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.social {
+  text-align: center;
+}
+.social__link {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  background-size: 50px 50px;
+}
+.social__link:hover {
+  opacity: 0.7;
+}
+.social__link--twitter {
+  background-image: url(../images/twitter.svg);
+}
+.social__link--facebook {
+  background-image: url(../images/facebook.svg);
+}
+.social__link--github {
+  background-image: url(../images/github.svg);
+}
+.social__link--instagram {
+  background-image: url(../images/instagram.svg);
+}
+
 .header {
   background-color: var(--background-hero);
 }
@@ -481,19 +557,16 @@ h1 {
 
 .contact {
   padding: 1.5em 0;
-  background-color: var(--principal-color);
-  color: var(--color);
+  background-color: #026fff;
+  color: white;
 }
-
-.email {
+.contact__email {
   text-align: center;
 }
-
-.email h3 {
+.contact__email__title {
   font-family: "Source Sans Pro", sans-serif;
 }
-
-.email a {
+.contact__email__button {
   margin: 1em auto 1em;
   width: 171px;
   border: 1px solid gray;
@@ -505,56 +578,25 @@ h1 {
   background-position-y: center;
   background-position-x: 5px;
   display: block;
-  background-color: var(--color);
+  background-color: white;
   color: gray;
+  transition-duration: 0.2s;
 }
-
-.email a:hover {
+.contact__email__button:hover {
   background-image: url(../images/envelope-hover.svg);
   color: var(--color);
   background-color: transparent;
   border-color: var(--color);
 }
 
-.social {
-  text-align: center;
-}
-
-.social-link {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  margin: 0 10px;
-  background-size: 50px 50px;
-}
-
-.social-link:hover {
-  opacity: 0.7;
-}
-
-.social-link.twitter {
-  background-image: url(../images/twitter.svg);
-}
-
-.social-link.facebook {
-  background-image: url(../images/facebook.svg);
-}
-
-.social-link.github {
-  background-image: url(../images/github.svg);
-}
-
-.social-link.instagram {
-  background-image: url(../images/instagram.svg);
-}
-
-/*----------------------------------------CONTACT*/
-/*----------------------------------------FOOOTER*/
 .footer {
   text-align: center;
-  border: 1px solid transparent;
-  color: var(--color);
+  color: white;
   background-color: var(--background-hero);
+  display: inline-block;
+}
+.footer__text {
+  margin: 16px 0;
 }
 
 .footer img {

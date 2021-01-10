@@ -1,23 +1,23 @@
-.skills{
+.skills {
   margin-top: 20px;
 
-  &__container{
+  &__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     height: 33vh;
 
-    .tech-button{
+    .tech-button {
       margin: auto 20px;
     }
   }
-  &__image{
+  &__image { 
     display: flex;
     margin: 0 auto;
     height: 33vh;
     justify-content: center;
 
-    &__img{
+    &__img {
       height: 100%;
     }
   }
