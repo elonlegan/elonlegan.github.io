@@ -6,6 +6,11 @@
   &__text{
     margin: 16px 0;
   }
+  @include media (tablet){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .footer img {

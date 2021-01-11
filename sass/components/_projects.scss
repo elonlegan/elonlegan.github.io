@@ -6,18 +6,30 @@
 
   &:hover {
     box-shadow: 1px 1px 10px 1px $color-principal;
-    cursor: pointer;
+  }
+
+  &__details{
+    @include media (tablet){
+      width: 50%;
+    }
   }
   
   &__title {
     font-size: 1.2em;
     margin-top: 0;
     margin-bottom: 10px;
+    @include media (tablet) {
+      font-size: 30px;
+    }
   }
   
   &__date,
-  &__url {
+  &__url,
+  &__tech {
     margin: 0.4em 0;
+    @include media (tablet){
+      margin: 10px 0;
+    }
   }
   
   &__tech {
@@ -43,11 +55,17 @@
   
   &__description {
     font-size: 0.8em;
+    @include media (tablet) {
+      font-size: 1.25rem;
+    }
   }
   
   &__image__container {
     margin: 0;
     display: flex;
+    @include media (tablet){
+      width: 50%;
+    }
   }
   
   &__image {
@@ -55,4 +73,17 @@
     max-width: 500px;
     margin: 0 auto;
   }
+
+  @include media(tablet){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+}
+
+.project-course,
+.project-date,
+.project-url {
+  margin: 10px 0;
 }

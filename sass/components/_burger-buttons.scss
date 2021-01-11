@@ -25,6 +25,9 @@
   border: 0;
   margin: 0;
   overflow: visible;
+  @include media(tablet){
+    display: none;
+  }
 }
 
 .hamburger.is-active .hamburger-inner,
