@@ -18,8 +18,11 @@
   @extend %container;
 }
 
-.container-size{
+.container--size{
   @extend %container;
   margin: 0 15px;
   max-width: 1024px;
+  @include media (desktop-m){
+      margin: 0 auto;
+  }
 }

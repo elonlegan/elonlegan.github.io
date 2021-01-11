@@ -9,29 +9,22 @@
     font-family: "Source Sans Pro", sans-serif;
     }
 
-    &__button {
-      margin: 1em auto 1em;
-      width: 171px;
-      border: 1px solid gray;
-      border-radius: 5px;
-      padding: 10px 20px 10px 25px;
-      background-image: url(../images/envelope.svg);
-      background-size: 15px 15px;
-      background-repeat: no-repeat;
-      background-position-y: center;
-      background-position-x: 5px;
-      display: block;
-      background-color: white;
-      color: gray;
-      transition-duration: 0.2s;
+    .button--email {
+      @include media (tablet){
+        margin: unset;
+      }
+    }
+    @include media (tablet){
+      text-align: unset;
 
-      &:hover {
-        background-image: url(../images/envelope-hover.svg);
-        color: var(--color);
-        background-color: transparent;
-        border-color: var(--color);
-      } 
     }
   }
-}
 
+  @include media (tablet){
+    padding: 0;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

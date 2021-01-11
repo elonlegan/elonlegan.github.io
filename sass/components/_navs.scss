@@ -18,6 +18,12 @@
   
   &__list {
     width: 100%;
+    @include media (tablet){
+      display: flex;
+      height: inherit;
+      flex-wrap: wrap;
+      align-items: center;
+    }
   }
   
   &__link {
@@ -28,7 +34,26 @@
     padding: 0.5em 0;
     display: flex;
     color: var(--color);
+    @include media (tablet){
+      border: none;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      height: inherit;
+      padding: 0 10px;
+      &:hover{
+        opacity: 0.7;
+        transition-duration: 0s;
+      }
+    }
   }
-
+  @include media (tablet){
+  box-sizing: initial;
+  padding: initial;
+  position: initial;
+  width: initial;
+  display: flex;
+  align-items: center;
+  background-color: initial;
+  }
 }
-
