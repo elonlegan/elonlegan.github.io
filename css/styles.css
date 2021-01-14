@@ -421,7 +421,7 @@ h6 {
   background-image: url(../images/envelope-hover.svg);
 }
 
-.dark-mode {
+.dark-mode, .dark-mode--header {
   padding: 0.5em 0;
   font-size: 1.5em;
   border-bottom: 1px solid;
@@ -433,16 +433,18 @@ h6 {
   padding-right: 10px;
 }
 
-.dark-mode--header {
-  font-size: 1rem;
-  border: none;
-}
 @media only screen and (min-width: 767px) {
   .dark-mode--header .dark-mode__text {
     margin: 0;
     padding: 10px 10px 10px 20px;
     margin-left: 10px;
     border-left: 1px solid;
+  }
+}
+@media only screen and (min-width: 767px) {
+  .dark-mode--header {
+    font-size: 1rem;
+    border: none;
   }
 }
 
