@@ -41,6 +41,12 @@
   background-color: #fff;
   border: 1px solid;
 }
+.tech-button--sass {
+  @extend .tech-button;
+  color: #fff;
+  background-color: #bf608f;
+  text-transform: uppercase;
+}
 .tech-button--vue {
   @extend .tech-button;
   background: linear-gradient(
