@@ -1,12 +1,13 @@
 .footer {
+  width: 100%;
   text-align: center;
   color: white;
   background-color: var(--background-hero);
   display: inline-block;
-  &__text{
+  &__text {
     margin: 16px 0;
   }
-  @include media (tablet){
+  @include media(tablet) {
     display: flex;
     align-items: center;
     justify-content: space-between;
