@@ -1,62 +1,64 @@
 .tech-button {
-  padding: 0px 3%;
-  color: white;
-  background-color: $color-principal;
-  border-radius: 10px;
-  text-align: center;
+	padding: 0px 3%;
+	color: white;
+	background-color: $color-principal;
+	border-radius: 10px;
+	text-align: center;
 }
-.tech-button--js {
-  @extend .tech-button;
-  color: #000000;
-  background-color: #f7df1e;
+.tech-button--javascript {
+	@extend .tech-button;
+	color: #000000;
+	background-color: #f7df1e;
+	text-transform: capitalize;
 }
 
 .tech-button--html {
-  @extend .tech-button;
-  background-color: #ff4500;
+	@extend .tech-button;
+	background-color: #ff4500;
+	text-transform: uppercase;
 }
 
 .tech-button--css {
-  @extend .tech-button;
-  background-color: #1f5faa;
+	@extend .tech-button;
+	background-color: #1f5faa;
 }
 .tech-button--nodejs {
-  @extend .tech-button;
-  color: #659a60;
-  background-color: #f7f7f7;
-  border: 1px solid;
+	@extend .tech-button;
+	color: #659a60;
+	background-color: #f7f7f7;
+	border: 1px solid;
 }
 .tech-button--angular {
-  @extend .tech-button;
-  background-color: #dd0031;
+	@extend .tech-button;
+	background-color: #dd0031;
 }
 .tech-button--react {
-  @extend .tech-button;
-  color: #03d6f6;
-  background-color: #232325;
+	@extend .tech-button;
+	color: #03d6f6;
+	background-color: #232325;
 }
 .tech-button--svelte {
-  @extend .tech-button;
-  color: #f73c00;
-  background-color: #fff;
-  border: 1px solid;
+	@extend .tech-button;
+	color: #f73c00;
+	background-color: #fff;
+	border: 1px solid;
 }
 .tech-button--sass {
-  @extend .tech-button;
-  color: #fff;
-  background-color: #bf608f;
-  text-transform: uppercase;
+	@extend .tech-button;
+	color: #fff;
+	background-color: #bf608f;
+	text-transform: uppercase;
 }
 .tech-button--vue {
-  @extend .tech-button;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 179, 123, 1) 0%,
-    rgba(45, 70, 92, 1) 100%
-  );
+	@extend .tech-button;
+	background: linear-gradient(
+		90deg,
+		rgba(0, 179, 123, 1) 0%,
+		rgba(45, 70, 92, 1) 100%
+	);
 }
 
 .tech-button--skill {
-  @extend .tech-button;
-  height: fit-content;
+	@extend .tech-button;
+	height: fit-content;
 }

@@ -8,35 +8,21 @@ fetch(url)
 			(project) =>
 				(element.innerHTML += `
 			<article class="project">
-          <a href="${project.url}" target="_blank" class="container--link">
             <div class="project__details">
               <h3 class="project__title">${project.title.rendered}</h3>
               <div class="project__tech" id="${project.slug}">
-								${project.skills.forEach((skill) =>
-									fetch(skill)
-										.then((response) => response.json())
-										.then((skill) => {
-											let skillContainer = document.querySelector(
-												`#${project.slug}`
-											);
-											skillContainer.innerHTML += `<a href="${skill.url_de_certificacion} " class="tech-button--${skill.slug} " target="_blank">${skill.slug} </a>`;
-											console.log(data);
-											console.log(skillContainer);
-										})
-								)}
+								${skillInsert('#' + project.slug, project.skills)}
               </div>
               <p class="project__date">
-                <small><strong>Date:</strong> 00/00/2020</small>
+                <small><strong>Date: </strong>${dateFormatter(
+									project.date
+								)}</small>
               </p>
               <p class="project__url">
-                <small
-                  ><strong>You can see it in:</strong>
-                  <a href="${
-										project.url
-									}" target="_blank" class="project__link" >
-                    ${project.url}
-                  </a></small
-                >
+                <small><strong>You can see it in:</strong>
+                  <a href="https://elonlegan.github.io/canvaGames/" class="project__link" target="_blank" rel="noopener noreferrer">
+                    ${urlPrettier(project.url)}
+                  </a></small>
               </p>
               <p class="project__description">
 								${project.description}
@@ -49,7 +35,6 @@ fetch(url)
                 alt="proyecto del curso de React Native"
               />
             </figure>
-          </a>
         </article>
 			`)
 		);
@@ -57,3 +42,37 @@ fetch(url)
 		console.log(data);
 	})
 	.catch((err) => console.log(err));
+
+function dateFormatter(date) {
+	let year = date.substr(0, 4);
+	let month = date.substr(4, 2);
+	let day = date.substr(6, 2);
+
+	return day + '/' + month + '/' + year;
+}
+
+function urlPrettier(url) {
+	let urlPrettier = url.substr(8);
+
+	return urlPrettier;
+}
+
+function skillInsert(skillContainerId, skills) {
+	var firstTime = true;
+	skills.forEach((skill) =>
+		fetch(skill)
+			.then((response) => response.json())
+			.then((skill) => {
+				let skillContainer = document.querySelector(skillContainerId);
+				if (firstTime == true) {
+					skillContainer.innerHTML = `<a href="${skill.url_de_certificacion}" class="tech-button--${skill.slug}" target="_blank" rel="noopener noreferrer">${skill.title.rendered}</a>
+					`;
+					firstTime = false;
+				} else {
+					skillContainer.innerHTML += `<a href="${skill.url_de_certificacion}" class="tech-button--${skill.slug}" target="_blank" rel="noopener noreferrer">${skill.title.rendered}</a>
+					`;
+				}
+			})
+			.catch((err) => console.log(err))
+	);
+}

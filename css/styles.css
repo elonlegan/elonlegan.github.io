@@ -203,7 +203,7 @@ h6 {
   transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.tech-button, .tech-button--skill, .tech-button--vue, .tech-button--sass, .tech-button--svelte, .tech-button--react, .tech-button--angular, .tech-button--nodejs, .tech-button--css, .tech-button--html, .tech-button--js {
+.tech-button, .tech-button--skill, .tech-button--vue, .tech-button--sass, .tech-button--svelte, .tech-button--react, .tech-button--angular, .tech-button--nodejs, .tech-button--css, .tech-button--html, .tech-button--javascript {
   padding: 0px 3%;
   color: white;
   background-color: #026fff;
@@ -211,13 +211,15 @@ h6 {
   text-align: center;
 }
 
-.tech-button--js {
+.tech-button--javascript {
   color: #000000;
   background-color: #f7df1e;
+  text-transform: capitalize;
 }
 
 .tech-button--html {
   background-color: #ff4500;
+  text-transform: uppercase;
 }
 
 .tech-button--css {
@@ -532,7 +534,7 @@ h6 {
 .project__tech {
   font-family: "Fjalla One", sans-serif;
 }
-.project__tech .tech-button, .project__tech .tech-button--js, .project__tech .tech-button--html, .project__tech .tech-button--css, .project__tech .tech-button--nodejs, .project__tech .tech-button--angular, .project__tech .tech-button--react, .project__tech .tech-button--svelte, .project__tech .tech-button--sass, .project__tech .tech-button--vue, .project__tech .tech-button--skill {
+.project__tech .tech-button, .project__tech .tech-button--javascript, .project__tech .tech-button--html, .project__tech .tech-button--css, .project__tech .tech-button--nodejs, .project__tech .tech-button--angular, .project__tech .tech-button--react, .project__tech .tech-button--svelte, .project__tech .tech-button--sass, .project__tech .tech-button--vue, .project__tech .tech-button--skill {
   margin-right: 5px;
 }
 .project strong {
@@ -620,7 +622,7 @@ h6 {
 .project__tech {
   font-family: "Fjalla One", sans-serif;
 }
-.project__tech .tech-button, .project__tech .tech-button--js, .project__tech .tech-button--html, .project__tech .tech-button--css, .project__tech .tech-button--nodejs, .project__tech .tech-button--angular, .project__tech .tech-button--react, .project__tech .tech-button--svelte, .project__tech .tech-button--sass, .project__tech .tech-button--vue, .project__tech .tech-button--skill {
+.project__tech .tech-button, .project__tech .tech-button--javascript, .project__tech .tech-button--html, .project__tech .tech-button--css, .project__tech .tech-button--nodejs, .project__tech .tech-button--angular, .project__tech .tech-button--react, .project__tech .tech-button--svelte, .project__tech .tech-button--sass, .project__tech .tech-button--vue, .project__tech .tech-button--skill {
   margin-right: 5px;
 }
 .project strong {
@@ -869,7 +871,7 @@ h6 {
   justify-content: space-around;
   height: 33vh;
 }
-.skills__container .tech-button, .skills__container .tech-button--js, .skills__container .tech-button--html, .skills__container .tech-button--css, .skills__container .tech-button--nodejs, .skills__container .tech-button--angular, .skills__container .tech-button--react, .skills__container .tech-button--svelte, .skills__container .tech-button--sass, .skills__container .tech-button--vue, .skills__container .tech-button--skill {
+.skills__container .tech-button, .skills__container .tech-button--javascript, .skills__container .tech-button--html, .skills__container .tech-button--css, .skills__container .tech-button--nodejs, .skills__container .tech-button--angular, .skills__container .tech-button--react, .skills__container .tech-button--svelte, .skills__container .tech-button--sass, .skills__container .tech-button--vue, .skills__container .tech-button--skill {
   margin: auto 20px;
 }
 @media only screen and (min-width: 767px) {
