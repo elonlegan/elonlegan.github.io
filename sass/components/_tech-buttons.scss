@@ -49,6 +49,13 @@
 	background-color: #bf608f;
 	text-transform: uppercase;
 }
+.tech-button--php {
+	@extend .tech-button;
+	color: #26182e;
+	background-color: #7377ad;
+	-webkit-text-stroke: 0.1px var(--background-project);
+	text-transform: uppercase;
+}
 .tech-button--vue {
 	@extend .tech-button;
 	background: linear-gradient(
