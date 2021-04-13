@@ -1,4 +1,7 @@
-const url = 'http://elonleganapi.atwebpages.com/wp-json/wp/v2/project';
+var webUrl = 'https://elonlegan-api.000webhostapp.com';
+var apiUrl = '/wp-json/wp/v2/project';
+
+const url = webUrl + apiUrl;
 
 fetch(url)
 	.then((response) => response.json())
@@ -20,7 +23,9 @@ fetch(url)
               </p>
               <p class="project__url">
                 <small><strong>You can see it in:</strong>
-                  <a href="https://elonlegan.github.io/canvaGames/" class="project__link" target="_blank" rel="noopener noreferrer">
+                  <a href="${
+										project.url
+									}" class="project__link" target="_blank" rel="noopener noreferrer">
                     ${urlPrettier(project.url)}
                   </a></small>
               </p>
