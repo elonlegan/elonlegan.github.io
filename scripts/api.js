@@ -37,7 +37,7 @@ fetch(url)
               <img
                 class="project__image"
                 src="${project.image}"
-                alt="proyecto del curso de React Native"
+                alt="${project.title.rendered} project image"
               />
             </figure>
         </article>
@@ -70,11 +70,11 @@ function skillInsert(skillContainerId, skills) {
 			.then((skill) => {
 				let skillContainer = document.querySelector(skillContainerId);
 				if (firstTime == true) {
-					skillContainer.innerHTML = `<a href="${skill.url_de_certificacion}" class="tech-button--${skill.slug}" target="_blank" rel="noopener noreferrer">${skill.title.rendered}</a>
+					skillContainer.innerHTML = `<a href="${skill.url_de_certificacion}" class="tech-button tech-button--${skill.slug}" target="_blank" rel="noopener noreferrer">${skill.title.rendered}</a>
 					`;
 					firstTime = false;
 				} else {
-					skillContainer.innerHTML += `<a href="${skill.url_de_certificacion}" class="tech-button--${skill.slug}" target="_blank" rel="noopener noreferrer">${skill.title.rendered}</a>
+					skillContainer.innerHTML += `<a href="${skill.url_de_certificacion}" class="tech-button tech-button--${skill.slug}" target="_blank" rel="noopener noreferrer">${skill.title.rendered}</a>
 					`;
 				}
 			})
