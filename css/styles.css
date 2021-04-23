@@ -203,7 +203,7 @@ h6 {
   transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.tech-button {
+.tech-button, .tech-button--skill {
   padding: 0px 3%;
   color: white;
   background-color: #026fff;
@@ -552,7 +552,7 @@ h6 {
 .project__tech {
   font-family: "Fjalla One", sans-serif;
 }
-.project__tech .tech-button {
+.project__tech .tech-button, .project__tech .tech-button--skill {
   margin-right: 5px;
 }
 .project strong {
@@ -640,7 +640,7 @@ h6 {
 .project__tech {
   font-family: "Fjalla One", sans-serif;
 }
-.project__tech .tech-button {
+.project__tech .tech-button, .project__tech .tech-button--skill {
   margin-right: 5px;
 }
 .project strong {
@@ -889,7 +889,7 @@ h6 {
   justify-content: space-around;
   height: 33vh;
 }
-.skills__container .tech-button {
+.skills__container .tech-button, .skills__container .tech-button--skill {
   margin: auto 20px;
 }
 @media only screen and (min-width: 767px) {
