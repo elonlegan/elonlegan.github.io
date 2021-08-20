@@ -44,6 +44,7 @@ fetch(url)
 			`)
 		);
 
+		document.getElementById('loader').style.display = 'none';
 		console.log(data);
 	})
 	.catch((err) => console.log(err));
