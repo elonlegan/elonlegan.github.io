@@ -58,7 +58,12 @@ function dateFormatter(date) {
 }
 
 function urlPrettier(url) {
-	let urlPrettier = url.substr(8);
+	let urlPrettier;
+	if (url.includes('https')) {
+		urlPrettier = url.substr(8);
+	} else {
+		urlPrettier = url.substr(7);
+	}
 
 	return urlPrettier;
 }
