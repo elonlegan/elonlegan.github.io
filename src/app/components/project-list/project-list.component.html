@@ -1,0 +1,14 @@
+<section id="portfolio-section" class="portfolio">
+  <div class="container--size" id="portfolio-container">
+    <h2 class="portfolio__title">PORTFOLIO (OUTSTANDING PROJECTS)</h2>
+    <ng-container *ngIf="projects.length; else loader">
+      <app-project-card
+        [project]="project"
+        *ngFor="let project of projects"
+      ></app-project-card>
+    </ng-container>
+    <ng-template #loader>
+      <div class="loader" id="loader"></div>
+    </ng-template>
+  </div>
+</section>

@@ -799,7 +799,7 @@ h6 {
   overflow: hidden;
 
   &__image {
-    height: 300px;
+    height: 270px;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -906,6 +906,7 @@ h6 {
     margin: 0 auto;
     height: 33vh;
     justify-content: center;
+    margin: 30px 0;
     @include media(tablet) {
       width: 20%;
     }
