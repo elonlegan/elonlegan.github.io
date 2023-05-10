@@ -2,35 +2,25 @@
   <div class="project__details">
     <h3 class="project__title">{{ project.title }}</h3>
     <div class="project__tech" id="{{ project.slug }}">
-      <ng-container *ngFor="let skill of project.skills">
-        <a
-          href="{{ skill.url_de_certificacion }}"
-          class="tech-button tech-button--{{ skill.slug }}"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {{ skill.title }}
-        </a>
-      </ng-container>
+      <app-skill-pill
+        [skill]="skill"
+        *ngFor="let skill of project.skills"
+      ></app-skill-pill>
     </div>
     <p class="project__date">
-      <small>
-        <strong>Date: </strong>
-        {{ project.date | date : "shortDate" }}</small
-      >
+      <strong>Date: </strong>
+      {{ project.date | date : "shortDate" }}
     </p>
     <p class="project__url">
-      <small>
-        <strong>You can see it in:</strong>
-        <a
-          [href]="project.url"
-          class="project__link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {{ project.url }}
-        </a>
-      </small>
+      <strong>You can see it in:</strong>
+      <a
+        [href]="project.url"
+        class="project__link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {{ project.url }}
+      </a>
     </p>
     <p class="project__description">{{ project.description }}</p>
   </div>

@@ -13,9 +13,10 @@ import { EventsComponent } from './components/events/events.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SkillPillComponent } from './components/skill-pill/skill-pill.component';
 
 @NgModule({
-  declarations: [AppComponent, ProjectListComponent, ProjectCardComponent, HeaderComponent, HeroComponent, EventsComponent, SkillsComponent, ContactComponent, FooterComponent],
+  declarations: [AppComponent, ProjectListComponent, ProjectCardComponent, HeaderComponent, HeroComponent, EventsComponent, SkillsComponent, ContactComponent, FooterComponent, SkillPillComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
