@@ -180,9 +180,9 @@ h6 {
   }
 }
 
-.hamburger.is-active .hamburger-inner,
-.hamburger.is-active .hamburger-inner::before,
-.hamburger.is-active .hamburger-inner::after {
+.hamburger.active .hamburger-inner,
+.hamburger.active .hamburger-inner::before,
+.hamburger.active .hamburger-inner::after {
   background-color: $burger-line-color;
 }
 
@@ -234,17 +234,17 @@ h6 {
     transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-.hamburger--spin.is-active .hamburger-inner {
+.hamburger--spin.active .hamburger-inner {
   transform: rotate(225deg);
   transition-delay: 0.12s;
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-.hamburger--spin.is-active .hamburger-inner::before {
+.hamburger--spin.active .hamburger-inner::before {
   top: 0;
   opacity: 0;
   transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
 }
-.hamburger--spin.is-active .hamburger-inner::after {
+.hamburger--spin.active .hamburger-inner::after {
   bottom: 0;
   transform: rotate(-90deg);
   transition: bottom 0.1s ease-out,
@@ -395,7 +395,7 @@ h6 {
   background: #171717;
   transition: 0.3s;
   color: $nav-font-color;
-  &.is-active {
+  &.active {
     left: 0;
   }
 

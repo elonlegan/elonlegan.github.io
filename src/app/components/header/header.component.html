@@ -3,6 +3,8 @@
   type="button"
   id="burger-menu"
   aria-label="burguer menu"
+  [class.active]="burgerMenuActive"
+  (click)="hideShow()"
 >
   <span class="hamburger-box">
     <span class="hamburger-inner"></span>
@@ -16,23 +18,23 @@
         src="assets/images/circle-me.png"
         alt="Logo de https://elonlegan.github.io"
       />
-      <span class="logo__text">Ángel León</span>
+      <span class="logo__text"> Ángel León </span>
     </figure>
-    <nav class="nav nav--header">
+    <nav class="nav nav--header" [class.active]="burgerMenuActive">
       <ol class="nav__list">
         <li>
           <a class="nav__link" href="#portfolio-section">Portfolio</a>
         </li>
         <li class="none">
-          <a class="nav__link" href="#events"> experience</a>
+          <a class="nav__link" href="#events"> experience </a>
         </li>
         <li>
           <a class="nav__link" href="#skills">Skills</a>
         </li>
         <li>
-          <a class="nav__link button--header" href="#contact"
-            >Let's work together</a
-          >
+          <a class="nav__link button--header" href="#contact">
+            Let's work together
+          </a>
         </li>
         <li class="dark-mode--header">
           <p class="dark-mode__text">Dark Mode</p>

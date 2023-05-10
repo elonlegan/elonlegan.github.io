@@ -14,7 +14,10 @@
       </ng-container>
     </div>
     <p class="project__date">
-      <small> <strong>Date: </strong> {{ project.date }}</small>
+      <small>
+        <strong>Date: </strong>
+        {{ project.date | date : "shortDate" }}</small
+      >
     </p>
     <p class="project__url">
       <small>
