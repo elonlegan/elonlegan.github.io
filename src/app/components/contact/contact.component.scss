@@ -1,0 +1,62 @@
+@import "../../../styles.scss";
+
+// @import "layout/contact";
+.contact {
+  padding: 1.5em 0;
+  background-color: $color-principal;
+  color: white;
+
+  &__email {
+    text-align: center;
+    &__title {
+      font-family: "Source Sans Pro", sans-serif;
+    }
+
+    .button--email {
+      @include media(tablet) {
+        margin: unset;
+      }
+    }
+    @include media(tablet) {
+      text-align: unset;
+    }
+  }
+
+  @include media(tablet) {
+    padding: 0;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+// @import "layout/contact";
+
+// @import "components/social";
+.social {
+  text-align: center;
+  &__link {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    background-size: 50px 50px;
+    &:hover {
+      opacity: 0.7;
+    }
+    &--twitter {
+      background-image: url(../../../assets/images/social/twitter.svg);
+    }
+    &--facebook {
+      background-image: url(../../../assets/images/social/facebook.svg);
+    }
+    &--github {
+      background-image: url(../../../assets/images/social/github.svg);
+    }
+    &--instagram {
+      background-image: url(../../../assets/images/social/instagram.svg);
+    }
+  }
+}
+// @import "components/social";
