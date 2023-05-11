@@ -15,7 +15,7 @@ $burger-background: #171717;
 $burger-line-color: #fff;
 
 //dark mode variables
-:root {
+body {
   --background-hero: #1d252c;
   --background-card: #f4fbff;
   --background-project: white;
@@ -23,7 +23,7 @@ $burger-line-color: #fff;
   --box-shadow: 1px 1px 10px 1px lightgrey;
 }
 
-:root.dark {
+body.dark-mode {
   --background-hero: #252b43;
   --background-card: #252b43;
   --background-project: #252b43;
