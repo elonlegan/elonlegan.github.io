@@ -40,6 +40,8 @@
           <p class="dark-mode__text">Dark Mode</p>
           <button
             class="switch switch--dark-mode"
+            [class.active]="darkMode$ | async"
+            (click)="onToggle()"
             aria-label="dark mode button"
           >
             <span></span><span></span>

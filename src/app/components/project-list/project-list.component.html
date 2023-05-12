@@ -4,7 +4,8 @@
     <ng-container *ngIf="projects.length; else loader">
       <app-project-card
         [project]="project"
-        *ngFor="let project of projects"
+        [ngClass]="{ 'last-child': last }"
+        *ngFor="let project of projects; let last = last"
       ></app-project-card>
     </ng-container>
     <ng-template #loader>

@@ -11,17 +11,29 @@
       <strong>Date: </strong>
       {{ project.date | date : "shortDate" }}
     </p>
-    <p class="project__url">
-      <strong>You can see it in:</strong>
-      <a
-        [href]="project.url"
-        class="project__link"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {{ project.url }}
-      </a>
-    </p>
+    <div class="project__url">
+      <strong>You can see it in</strong>
+      <div class="project__link__container">
+        <a
+          [href]="project.url"
+          class="project__link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="bi bi-globe-americas"></i>
+          {{ project.url }}
+        </a>
+        <a
+          [href]="project.url"
+          class="project__link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="bi bi-github"></i>
+          {{ project.url }}
+        </a>
+      </div>
+    </div>
     <p class="project__description">{{ project.description }}</p>
   </div>
   <figure class="project__image__container">
