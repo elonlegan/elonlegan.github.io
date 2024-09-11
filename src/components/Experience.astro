@@ -1,0 +1,47 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Currently...",
+    title: "Front end developer",
+    company: "Tekus",
+    goals:
+      [
+        "Developed an Angular component library, reducing code repetition by 50% and improving kiosk development efficiency by 40%.",
+        "Successfully completed a key project on a tight two-week deadline, adjusting features and delivering on time while meeting all client expectations.",
+      ],
+  },
+  {
+    date: "March 2022",
+    title: "Full stack developer",
+    company: "Leanware",
+    goals: [
+      "Developed a module for creating customized document templates, reducing document preparation time by 80%.",
+      "Maintained project objectives and deadlines as the sole developer, achieving 100% of project goals.",
+      "Enhanced the user interface and application functionalities, leading to an 80% increase in customer satisfaction.",
+      "Created an event tracking module for client notifications and reminders about legislative changes, improving user awareness and efficiency."
+    ]
+  },
+  {
+    date: "May 2021",
+    title: "Full stack developer",
+    company: "Pi Interactiva",
+    goals: [
+      "Developed an interactive web game that boosted the conversion rate by 20%, effectively attracting new users.",
+      "Contributed to 60% of an application for the Colombian Ministry of Education.",
+      "Lead the development team to create an online learning platform for ANALDEX, achieving a 95% customer satisfaction rate.",
+    ]
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+        
+      </li>
+    ))
+  }
+</ol>
