@@ -1,56 +1,160 @@
 ---
-import Angular from '@/components/icons/Angular.astro'
-import ReactIcon from '@/components/icons/React.astro'
-import NextJS from '@/components/icons/NextJS.astro'
-import Tailwind from '@/components/icons/Tailwind.astro'
-import TypeScriptIcon from '@/components/icons/TypeScript.astro'
-import NodeIcon from '@/components/icons/Node.astro'
-import ExpressIcon from '@/components/icons/Express.astro'
-import NestIcon from '@/components/icons/Nest.astro'
-import PrismaIcon from '@/components/icons/Prisma.astro'
-import ViteIcon from '@/components/icons/Vite.astro'
-import NxIcon from '@/components/icons/Nx.astro'
-import GitHub from '@/components/icons/GitHub.astro'
+import Angular from '@/components/icons/Angular.astro';
+import ReactIcon from '@/components/icons/React.astro';
+import NextJS from '@/components/icons/NextJS.astro';
+import Tailwind from '@/components/icons/Tailwind.astro';
+import TypeScriptIcon from '@/components/icons/TypeScript.astro';
+import NodeIcon from '@/components/icons/Node.astro';
+import ExpressIcon from '@/components/icons/Express.astro';
+import NestIcon from '@/components/icons/Nest.astro';
+import PrismaIcon from '@/components/icons/Prisma.astro';
+import ViteIcon from '@/components/icons/Vite.astro';
+import NxIcon from '@/components/icons/Nx.astro';
+import GitHub from '@/components/icons/GitHub.astro';
 
-type SkillTag = { name: string; class: string; icon?: any }
+type SkillTag = { name: string; class: string; icon?: any };
 
 const TAGS: Record<string, SkillTag> = {
-  ANGULAR: { name: 'Angular', class: 'bg-[#7e011e] text-white', icon: Angular },
-  REACT: { name: 'React', class: 'bg-[#0b1b28] text-[#61dafb]', icon: ReactIcon },
-  NEXT: { name: 'Next.js', class: 'bg-black text-white', icon: NextJS },
-  TYPESCRIPT: { name: 'TypeScript', class: 'bg-[#2f74c0] text-white', icon: TypeScriptIcon },
-  TAILWIND: { name: 'Tailwind CSS', class: 'bg-[#003159] text-white', icon: Tailwind },
-  NODE: { name: 'Node.js', class: 'bg-[#143a2b] text-[#68a063]', icon: NodeIcon },
-  EXPRESS: { name: 'Express', class: 'bg-gray-900 text-white', icon: ExpressIcon },
-  NEST: { name: 'NestJS', class: 'bg-[#ea2845] text-white', icon: NestIcon },
-  REST: { name: 'REST', class: 'bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white' },
-  PRISMA: { name: 'Prisma', class: 'bg-[#0b2b3a] text-white', icon: PrismaIcon },
-  GIT: { name: 'Git/GitHub', class: 'bg-[#161b22] text-white', icon: GitHub },
-  CICD: { name: 'CI/CD', class: 'bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white' },
-  TESTING: { name: 'Testing (Jest)', class: 'bg-[#99425b] text-white' },
-  VITE: { name: 'Vite', class: 'bg-[#2f1764] text-[#ffd92e]', icon: ViteIcon },
-  NX: { name: 'Nx', class: 'bg-[#1a2530] text-white', icon: NxIcon },
-}
+	ANGULAR: {
+		name: 'Angular',
+		class: 'bg-[#7e011e] text-white',
+		icon: Angular,
+	},
+	REACT: {
+		name: 'React',
+		class: 'bg-[#0b1b28] text-[#61dafb]',
+		icon: ReactIcon,
+	},
+	NEXT: {
+		name: 'Next.js',
+		class: 'bg-black text-white',
+		icon: NextJS,
+	},
+	TYPESCRIPT: {
+		name: 'TypeScript',
+		class: 'bg-[#2f74c0] text-white',
+		icon: TypeScriptIcon,
+	},
+	TAILWIND: {
+		name: 'Tailwind CSS',
+		class: 'bg-[#003159] text-white',
+		icon: Tailwind,
+	},
+	NODE: {
+		name: 'Node.js',
+		class: 'bg-[#143a2b] text-[#68a063]',
+		icon: NodeIcon,
+	},
+	EXPRESS: {
+		name: 'Express',
+		class: 'bg-gray-900 text-white',
+		icon: ExpressIcon,
+	},
+	NEST: {
+		name: 'NestJS',
+		class: 'bg-[#ea2845] text-white',
+		icon: NestIcon,
+	},
+	REST: {
+		name: 'REST',
+		class:
+			'bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white',
+	},
+	PRISMA: {
+		name: 'Prisma',
+		class: 'bg-[#0b2b3a] text-white',
+		icon: PrismaIcon,
+	},
+	GIT: {
+		name: 'Git/GitHub',
+		class: 'bg-[#161b22] text-white',
+		icon: GitHub,
+	},
+	CICD: {
+		name: 'CI/CD',
+		class:
+			'bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white',
+	},
+	TESTING: {
+		name: 'Testing (Jest)',
+		class: 'bg-[#99425b] text-white',
+	},
+	VITE: {
+		name: 'Vite',
+		class: 'bg-[#2f1764] text-[#ffd92e]',
+		icon: ViteIcon,
+	},
+	NX: {
+		name: 'Nx',
+		class: 'bg-[#1a2530] text-white',
+		icon: NxIcon,
+	},
+};
 
 const SKILLS: { group: string; items: SkillTag[] }[] = [
-  { group: 'Frontend', items: [TAGS.ANGULAR, TAGS.REACT, TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.TAILWIND] },
-  { group: 'Backend', items: [TAGS.NODE, TAGS.EXPRESS, TAGS.NEST, TAGS.REST, TAGS.PRISMA] },
-  { group: 'Tooling', items: [TAGS.GIT, TAGS.CICD, TAGS.TESTING, TAGS.VITE, TAGS.NX] },
-]
+	{
+		group: 'Frontend',
+		items: [
+			TAGS.ANGULAR,
+			TAGS.REACT,
+			TAGS.NEXT,
+			TAGS.TYPESCRIPT,
+			TAGS.TAILWIND,
+		],
+	},
+	{
+		group: 'Backend',
+		items: [
+			TAGS.NODE,
+			TAGS.EXPRESS,
+			TAGS.NEST,
+			TAGS.REST,
+			TAGS.PRISMA,
+		],
+	},
+	{
+		group: 'Tooling',
+		items: [
+			TAGS.GIT,
+			TAGS.CICD,
+			TAGS.TESTING,
+			TAGS.VITE,
+			TAGS.NX,
+		],
+	},
+];
 ---
 
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-  {SKILLS.map(({ group, items }: { group: string; items: SkillTag[] }) => (
-    <section class="rounded-2xl border border-black/10 dark:border-white/10 p-4 bg-white/70 dark:bg-black/20 backdrop-blur-sm">
-      <h3 class="text-base md:text-lg font-semibold mb-2 text-gray-800 dark:text-gray-100">{group}</h3>
-      <ul class="flex flex-wrap gap-2">
-  {items.map((tag: SkillTag) => (
-          <li class={`text-xs md:text-sm rounded-full px-3 py-1 border border-white/10 flex items-center gap-2 ${tag.class}`}>
-            {tag.icon && <tag.icon class="size-3 md:size-4" />}
-            {tag.name}
-          </li>
-        ))}
-      </ul>
-    </section>
-  ))}
+<div
+	class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6'
+>
+	{
+		SKILLS.map(
+			({
+				group,
+				items,
+			}: {
+				group: string;
+				items: SkillTag[];
+			}) => (
+				<section class='rounded-2xl border border-black/10 dark:border-white/10 p-4 bg-white/70 dark:bg-black/20 backdrop-blur-sm'>
+					<h3 class='text-base md:text-lg font-semibold mb-2 text-gray-800 dark:text-gray-100'>
+						{group}
+					</h3>
+					<ul class='flex flex-wrap gap-2'>
+						{items.map((tag: SkillTag) => (
+							<li
+								class={`text-xs md:text-sm rounded-full px-3 py-1 border border-white/10 flex items-center gap-2 ${tag.class}`}
+							>
+								{tag.icon && (
+									<tag.icon class='size-3 md:size-4' />
+								)}
+								{tag.name}
+							</li>
+						))}
+					</ul>
+				</section>
+			)
+		)
+	}
 </div>

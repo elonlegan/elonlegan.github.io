@@ -95,8 +95,11 @@ const PROJECTS = [
 						<h3 class='text-2xl font-bold text-gray-800 dark:text-gray-100'>
 							{title}
 						</h3>
-									<div class='flex flex-wrap mt-2'>
-										<ul class='flex flex-row mb-2 gap-x-2' aria-label="Tecnologías usadas">
+						<div class='flex flex-wrap mt-2'>
+							<ul
+								class='flex flex-row mb-2 gap-x-2'
+								aria-label='Tecnologías usadas'
+							>
 								{tags.map((tag) => (
 									<li>
 										<span
@@ -112,7 +115,7 @@ const PROJECTS = [
 							<div class='mt-2 text-gray-700 dark:text-gray-400'>
 								{description}
 							</div>
-											<footer class='flex items-end justify-start mt-4 gap-x-4'>
+							<footer class='flex items-end justify-start mt-4 gap-x-4'>
 								{github && (
 									<LinkButton href={github}>
 										<GitHub class='size-6' />
