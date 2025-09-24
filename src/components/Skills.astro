@@ -57,8 +57,7 @@ const TAGS: Record<string, SkillTag> = {
 	},
 	REST: {
 		name: 'REST',
-		class:
-			'bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white',
+		class: 'bg-gray-800 text-white',
 	},
 	PRISMA: {
 		name: 'Prisma',
@@ -72,8 +71,7 @@ const TAGS: Record<string, SkillTag> = {
 	},
 	CICD: {
 		name: 'CI/CD',
-		class:
-			'bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white',
+		class: 'bg-gray-800 text-white',
 	},
 	TESTING: {
 		name: 'Testing (Jest)',
@@ -137,8 +135,8 @@ const SKILLS: { group: string; items: SkillTag[] }[] = [
 				group: string;
 				items: SkillTag[];
 			}) => (
-				<section class='rounded-2xl border border-black/10 dark:border-white/10 p-4 bg-white/70 dark:bg-black/20 backdrop-blur-sm'>
-					<h3 class='text-base md:text-lg font-semibold mb-2 text-gray-800 dark:text-gray-100'>
+				<section class='rounded-2xl border border-white/10 p-4 bg-black/20 backdrop-blur-sm'>
+					<h3 class='text-base md:text-lg font-semibold mb-2 text-gray-100'>
 						{group}
 					</h3>
 					<ul class='flex flex-wrap gap-2'>
