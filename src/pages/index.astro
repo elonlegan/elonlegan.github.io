@@ -4,45 +4,53 @@ import Layout from "@/layouts/Layout.astro"
 import AboutMe from "@/components/AboutMe.astro"
 import Briefcase from "@/components/icons/Briefcase.astro"
 import CodeIcon from "@/components/icons/Code.astro"
+import ToolsIcon from "@/components/icons/Tools.astro"
 import Experience from "@/components/Experience.astro"
 import ProfileCheck from "@/components/icons/ProfileCheck.astro"
 import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
 import Hero from "@/components/Hero.astro"
 import TitleSection from "@/components/TitleSection.astro"
+import Skills from "@/components/Skills.astro"
 ---
 
 <Layout
-  title="Portafolio de Angel Leon - Desarrollador y Programador Web con 3 años de Experiencia"
-  description="Contrata a Angel Leon para desarrollar tu sitio web o aplicación móvil. Desarrollador Web con experiencia y pasión por crear proyectos innovadores y funcionales."
+  title="Angel Leon – Full‑stack Web Developer (Angular/React, Node)"
+  description="Full‑stack developer with 3 years' experience building performant web apps with Angular/React and Node. Passionate about clean code, DX, and measurable impact."
 >
-  <main class="px-4">
+  <main id="main-content" class="px-4">
     <SectionContainer class="py-16 md:py-36">
-      <Hero>
-      </slot>
-    </Hero>
+      <Hero />
     </SectionContainer>
     <div class="space-y-24">
     <SectionContainer id="experience">
-      <TitleSection>
+      <TitleSection as="h2">
         <Briefcase class="size-8" />
-        Work Experience
+        Experience
       </TitleSection>
       <Experience />
     </SectionContainer>
 
     <SectionContainer id="projects">
-      <TitleSection>
+      <TitleSection as="h2">
         <CodeIcon class="size-7" />
         Projects
       </TitleSection>
       <Projects />
     </SectionContainer>
 
+    <SectionContainer id="skills">
+      <TitleSection as="h2">
+        <ToolsIcon class="size-7" />
+        Skills & Stack
+      </TitleSection>
+      <Skills />
+    </SectionContainer>
+
     <SectionContainer id="about-me">
-      <TitleSection>
+      <TitleSection as="h2">
         <ProfileCheck class="size-8" />
-        About Me
+        About
       </TitleSection>
       <AboutMe />
     </SectionContainer>

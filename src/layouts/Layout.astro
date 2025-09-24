@@ -8,24 +8,73 @@ import { ViewTransitions } from "astro:transitions"
 interface Props {
   title: string
   description: string
+  noindex?: boolean
 }
 
-const { description, title } = Astro.props
+const { description, title, noindex = false } = Astro.props
+const site = (Astro.site && Astro.site.toString()) || 'https://elonlegan.github.io'
+const url = Astro.url ? new URL(Astro.url.pathname, site) : new URL(site)
+const ogImage = new URL('/elonlegan.webp', site).href
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Angel Leon',
+  url: site,
+  jobTitle: 'Full Stack Web Developer',
+  image: ogImage,
+  sameAs: [
+    'https://www.linkedin.com/in/elonlegan',
+    'https://github.com/elonlegan',
+  ],
+  knowsAbout: [
+    'JavaScript',
+    'TypeScript',
+    'Angular',
+    'React',
+    'Next.js',
+    'Node.js',
+    'Express',
+    'NestJS',
+    'Tailwind CSS',
+  ],
+}
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <meta name="author" content="Angel Leon" />
+    <link rel="canonical" href={url.href} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Angel Leon" />
+    <meta property="og:url" content={url.href} />
+    <meta property="og:image" content={ogImage} />
+  <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0b0b" />
+  <link rel="alternate" hreflang="es" href={url.href} />
+    <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
     <title>{title}</title>
     <ViewTransitions />
   </head>
 
   <body class="relative text-black dark:text-white">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 bg-yellow-300 text-black px-3 py-2 rounded-md">Saltar al contenido</a>
     <div
       class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
       bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
