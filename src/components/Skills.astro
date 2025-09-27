@@ -11,6 +11,7 @@ import PrismaIcon from '@/components/icons/Prisma.astro';
 import ViteIcon from '@/components/icons/Vite.astro';
 import NxIcon from '@/components/icons/Nx.astro';
 import GitHub from '@/components/icons/GitHub.astro';
+import FigmaIcon from '@/components/icons/Figma.astro';
 
 type SkillTag = { name: string; class: string; icon?: any };
 
@@ -87,6 +88,11 @@ const TAGS: Record<string, SkillTag> = {
 		class: 'bg-[#1a2530] text-white',
 		icon: NxIcon,
 	},
+  FIGMA: {
+    name: 'Figma',
+    class: 'bg-[#f7f7f7] text-black',
+    icon: FigmaIcon,
+  },
 };
 
 const SKILLS: { group: string; items: SkillTag[] }[] = [
@@ -101,16 +107,6 @@ const SKILLS: { group: string; items: SkillTag[] }[] = [
 		],
 	},
 	{
-		group: 'Backend',
-		items: [
-			TAGS.NODE,
-			TAGS.EXPRESS,
-			TAGS.NEST,
-			TAGS.REST,
-			TAGS.PRISMA,
-		],
-	},
-	{
 		group: 'Tooling',
 		items: [
 			TAGS.GIT,
@@ -118,6 +114,17 @@ const SKILLS: { group: string; items: SkillTag[] }[] = [
 			TAGS.TESTING,
 			TAGS.VITE,
 			TAGS.NX,
+			TAGS.FIGMA,
+		],
+	},
+	{
+		group: 'Backend',
+		items: [
+			TAGS.NODE,
+			TAGS.EXPRESS,
+			TAGS.NEST,
+			TAGS.REST,
+			TAGS.PRISMA,
 		],
 	},
 ];
