@@ -1,0 +1,137 @@
+---
+interface Props {
+  /** ISO date string representing the start date, e.g., '2021-05-01' */
+  start: string
+  /** Optional custom text to display inline; if omitted, label is auto-calculated like `4+ years`. */
+  label?: string
+}
+
+const { start, label } = Astro.props as Props
+
+// Build-time fallback (in case JS is disabled or before client hydration)
+function diffYM(from: Date, to: Date) {
+  let years = to.getFullYear() - from.getFullYear()
+  let months = to.getMonth() - from.getMonth()
+  let days = to.getDate() - from.getDate()
+  if (days < 0) {
+    months -= 1
+  }
+  if (months < 0) {
+    years -= 1
+    months += 12
+  }
+  return { years: Math.max(0, years), months: Math.max(0, months) }
+}
+
+const startDate = new Date(start)
+const now = new Date()
+const { years, months } = diffYM(startDate, now)
+// helper: add years+months to start to compute remaining days/minutes
+function addYearsMonths(date: Date, y: number, m: number) {
+  const d = new Date(date)
+  d.setFullYear(d.getFullYear() + y)
+  d.setMonth(d.getMonth() + m)
+  return d
+}
+function fmt(y: number, m: number, d: number, h: number, min: number, sec: number) {
+  const yPart = y > 0 ? `${y} year${y === 1 ? '' : 's'}` : ''
+  const mPart = m > 0 ? `${m} month${m === 1 ? '' : 's'}` : ''
+  const dPart = d > 0 ? `${d} day${d === 1 ? '' : 's'}` : ''
+  const hPart = h > 0 ? `${h} hour${h === 1 ? '' : 's'}` : ''
+  const minPart = min > 0 ? `${min} minute${min === 1 ? '' : 's'}` : ''
+  const secPart = `${sec} second${sec === 1 ? '' : 's'}`
+  return [yPart, mPart, dPart, hPart, minPart, secPart].filter(Boolean).join(', ')
+}
+const anchor = addYearsMonths(startDate, years, months)
+const ms = Math.max(0, now.getTime() - anchor.getTime())
+const oneSecond = 1000
+const oneMinute = 60 * oneSecond
+const oneHour = 60 * oneMinute
+const oneDay = 24 * oneHour
+let remainder = ms
+const days = Math.floor(remainder / oneDay); remainder %= oneDay
+const hours = Math.floor(remainder / oneHour); remainder %= oneHour
+const minutes = Math.floor(remainder / oneMinute); remainder %= oneMinute
+const seconds = Math.floor(remainder / oneSecond)
+const computedLabel = `${Math.max(0, years)}+ years`
+const builtTooltip = `${fmt(years, months, days, hours, minutes, seconds)}`
+---
+
+<span
+  data-years-experience
+  data-start={start}
+  data-auto-label={label ? 'false' : 'true'}
+  aria-label={builtTooltip}
+  role="tooltip"
+  data-microtip-position="top"
+  class="underline decoration-dotted underline-offset-4 cursor-help"
+>
+  <span data-ye-label>{label ?? computedLabel}</span>
+  <span class="sr-only">, {builtTooltip}</span>
+  <script is:inline>
+    // Keep tooltip up-to-date on the client and across view transitions
+    const update = (root = document) => {
+      const els = root.querySelectorAll('[data-years-experience]')
+      els.forEach((el) => {
+        const start = el.getAttribute('data-start')
+        if (!start) return
+        const startDate = new Date(start)
+        const now = new Date()
+        let years = now.getFullYear() - startDate.getFullYear()
+        let months = now.getMonth() - startDate.getMonth()
+        let dayDelta = now.getDate() - startDate.getDate()
+        if (dayDelta < 0) months -= 1
+        if (months < 0) { years -= 1; months += 12 }
+        // compute days, hours, minutes, seconds remainder after years+months
+        const anchor = new Date(startDate)
+        anchor.setFullYear(anchor.getFullYear() + years)
+        anchor.setMonth(anchor.getMonth() + months)
+        const ms = Math.max(0, now.getTime() - anchor.getTime())
+        const oneSecond = 1000
+        const oneMinute = 60 * oneSecond
+        const oneHour = 60 * oneMinute
+        const oneDay = 24 * oneHour
+        let remainder = ms
+        const days = Math.floor(remainder / oneDay); remainder %= oneDay
+        const hours = Math.floor(remainder / oneHour); remainder %= oneHour
+        const minutes = Math.floor(remainder / oneMinute); remainder %= oneMinute
+        const seconds = Math.floor(remainder / oneSecond)
+
+        const parts = []
+        if (years > 0) parts.push(`${years} year${years === 1 ? '' : 's'}`)
+        if (months > 0) parts.push(`${months} month${months === 1 ? '' : 's'}`)
+        if (days > 0) parts.push(`${days} day${days === 1 ? '' : 's'}`)
+        if (hours > 0) parts.push(`${hours} hour${hours === 1 ? '' : 's'}`)
+        if (minutes > 0) parts.push(`${minutes} minute${minutes === 1 ? '' : 's'}`)
+        // Always show seconds to reflect live ticking
+        parts.push(`${seconds} second${seconds === 1 ? '' : 's'}`)
+        const tooltip = parts.join(', ')
+  // Microtip reads aria-label; avoid native title to prevent double UI
+  el.removeAttribute('title')
+  el.setAttribute('aria-label', tooltip)
+
+        // Auto-label update if no custom label provided
+        const auto = el.getAttribute('data-auto-label') === 'true'
+        if (auto) {
+          const labelNode = el.querySelector('[data-ye-label]')
+          if (labelNode) labelNode.textContent = `${Math.max(0, years)}+ years`
+        }
+      })
+    }
+    // Global 1s ticker to keep tooltips fresh across pages
+    ;(() => {
+  const g = window
+      if (g.__YE_INITED__) return
+      g.__YE_INITED__ = true
+      const init = () => {
+        update()
+        if (g.__YE_INTERVAL__) clearInterval(g.__YE_INTERVAL__)
+        g.__YE_INTERVAL__ = setInterval(() => update(), 1000)
+      }
+      document.addEventListener('astro:page-load', init)
+      document.addEventListener('astro:after-swap', init)
+      // Also run immediately in case of direct load
+      init()
+    })()
+  </script>
+</span>

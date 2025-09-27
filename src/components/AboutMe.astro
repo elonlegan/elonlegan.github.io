@@ -1,5 +1,6 @@
 ---
 const personalImageAlt = 'Angel Leon';
+import YearsExperience from '@/components/YearsExperience.astro';
 ---
 
 <article
@@ -9,9 +10,7 @@ const personalImageAlt = 'Angel Leon';
 		class='[&>p]:mb-4 [&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1'
 	>
 		<p>
-			I'm a <strong
-				>Frontend Engineer with 4+ years of experience</strong
-			> who enjoys building clean, performant interfaces. I've
+			I'm a <strong>Frontend Engineer with <YearsExperience start="2021-05-01" /> of experience</strong> who enjoys building clean, performant interfaces. I've
 			shipped production apps with
 			<strong>Angular, React/Next.js</strong> and contributed
 			across the stack with
