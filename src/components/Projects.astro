@@ -5,6 +5,7 @@ import Tailwind from './icons/Tailwind.astro';
 import Figma from './icons/Figma.astro';
 import Angular from './icons/Angular.astro';
 import Ionic from './icons/Ionic.astro';
+import React from './icons/React.astro';
 import Link from './icons/Link.astro';
 import LinkButton from './LinkButton.astro';
 
@@ -34,30 +35,58 @@ const TAGS = {
 		class: 'bg-[#012665] text-white',
 		icon: Ionic,
 	},
+	REACT: {
+		name: 'React',
+		class: 'bg-[#61dafb] text-black',
+		icon: React,
+	},
+	PRODUCT_DESIGN: {
+		name: 'Product Design',
+		class: 'bg-gray-700 text-white',
+		icon: null,
+	},
 };
 const PROJECTS = [
 	{
+		title: 'Abordando — Travel Admin & Client Platform',
+		description:
+			'A full-featured travel management platform built as two distinct Next.js applications: an admin dashboard and a client-facing site. I handled the entire project end-to-end, from architecture to deployment. A key challenge was balancing rapid admin development with a custom, scalable client design system. For the admin, I chose a client-rendered approach and leveraged NextUI to accelerate UI development and streamline workflows. For the client, I implemented server-side rendering (SSR) to optimize SEO and used shadcn to craft a bespoke design system with custom components. The project required designing complex, dynamic forms, ensuring data consistency, and building responsive, intuitive interfaces for different user roles. My solutions included modular form components, real-time feedback with custom spinners and modals, and advanced search/autocomplete features. The result is a robust, scalable platform that simplifies travel operations and delivers a seamless booking experience.',
+		links: [
+			'https://staging.abordando.com.co/',
+			'https://admin.staging.abordando.com.co/',
+		],
+		image: '/projects/abordando.webp',
+		tags: [
+			TAGS.NEXT,
+			TAGS.REACT,
+			TAGS.TAILWIND,
+			TAGS.PRODUCT_DESIGN,
+		],
+	},
+	{
 		title: 'Memento Mori — life in weeks',
-		description: `Personal project to visualize life in weeks and reflect on time. Built responsive UI and reminder flows to encourage mindful planning.`,
-		link: 'https://memento-mori-lilac.vercel.app',
+		description: `Personal project to visualize life in weeks and reflect on time. The main challenge was translating a philosophical concept into a tangible, interactive experience that feels both personal and universal. As this is primarily an app, I focused on crafting an interface that evokes a sense of reflection and calm.
+
+A key design decision was to incorporate subtle skeuomorphism, drawing inspiration from classic paper or papyrus textures. I aimed for a balanced approach—suggesting the feel of a traditional medium without overwhelming the user, maintaining clarity and usability. This choice was intentional to visually express stoicism and philosophical depth, aligning the design language with the app’s core message.
+
+I used Figma to prototype minimalist layouts, warm color palettes, and micro-interactions that encourage mindful engagement. The reminder and settings flows were designed to be intuitive, allowing users to set their birthdate and life expectancy with ease, and see immediate updates in the visualization.
+
+Clever solutions included leveraging RxJS for reactive state management, optimizing rendering with Angular standalone components, and using Ionic’s modal and picker components for smooth, native-like interactions. Persistent storage ensures user data is saved across sessions, and the app is fully PWA-ready for mobile use.`,
+		links: ['https://memento-mori-lilac.vercel.app'],
 		github: 'https://github.com/elonlegan/memento-mori',
 		image: '/projects/memento-mori.webp',
-		tags: [TAGS.IONIC, TAGS.ANGULAR, TAGS.FIGMA],
+		tags: [
+			TAGS.IONIC,
+			TAGS.ANGULAR,
+			TAGS.FIGMA,
+			TAGS.PRODUCT_DESIGN,
+		],
 	},
 	{
-		title: 'IALingo — AI conversation practice',
+		title: 'Reporter.ia — AI-Powered News Summarizer',
 		description:
-			'English practice app. Enter a context (e.g., interview, meeting) and get tailored dialogues with LLMs. I built the UI and flows to iterate prompts and review vocab.',
-		link: 'https://ialingo.vercel.app/',
-		github: 'https://github.com/elonlegan/ialingo',
-		image: '/projects/ialingo.webp',
-		tags: [TAGS.NEXT, TAGS.TAILWIND],
-	},
-	{
-		title: 'reporter.ia — news summaries with LLMs',
-		description:
-			'Web app that summarizes news using LLMs so users can scan key events quickly. I focused on the UX for feeds, summary detail, and shareable links.',
-		link: 'https://reporter-ia.vercel.app/',
+			'This project was created during a hackathon in just over a day, aiming to transform news consumption with AI-driven summaries and a modern, accessible interface. One of the main challenges was experimenting with skeuomorphic design, trying to evoke the feel of traditional print media. However, I realized that classic newspaper typography and grid layouts do not translate well to digital products, and the intended sensations were not fully achieved. As a result, the project is currently awaiting a redesign to better convey a sense of modernity, speed, and effective problem-solving—reflecting its core value of delivering news summaries in minutes. The responsive UI, custom masonry layout, and intuitive search demonstrate my product thinking and frontend skills, but the design is in progress to truly match the experience users expect.',
+		links: ['https://reporter-ia.vercel.app/'],
 		github: 'https://github.com/elonlegan/reporter.ia',
 		image: '/projects/reporter-ia.webp',
 		tags: [TAGS.NEXT, TAGS.TAILWIND],
@@ -73,7 +102,7 @@ const PROJECTS = [
 				title,
 				description,
 				tags,
-				link,
+				links,
 				github,
 			}) => (
 				<article class='flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0'>
@@ -102,7 +131,9 @@ const PROJECTS = [
 										<span
 											class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
 										>
-											<tag.icon class='size-4' />
+											{tag.icon && (
+												<tag.icon class='size-4' />
+											)}
 											{tag.name}
 										</span>
 									</li>
@@ -119,11 +150,14 @@ const PROJECTS = [
 										Code
 									</LinkButton>
 								)}
-								{link && (
-									<LinkButton href={link}>
-										<Link class='size-4' />
-										Preview
-									</LinkButton>
+								{links.map(
+									(link) =>
+										link && (
+											<LinkButton href={link}>
+												<Link class='size-4' />
+												Preview
+											</LinkButton>
+										)
 								)}
 							</footer>
 						</div>
