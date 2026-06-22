@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "experience": "Experience",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hey, I'm Angel Leon — Product Engineer",
+    "badge": "Open to work",
+    "bio_pre_years": "Product-focused engineer with",
+    "bio_post_years": "building impactful digital products that blend design and engineering. Experienced in <strong>Angular, React/Next.js, TypeScript</strong>, and collaborating closely with design teams. I care about <strong>user experience</strong>, product strategy, and delivering features that move metrics. Comfortable working across the stack and bridging the gap between design and development.",
+    "cta_email": "Email",
+    "cta_linkedin": "LinkedIn",
+    "cta_resume": "Download Resume"
+  },
+  "experience": {
+    "section_title": "Experience",
+    "items": [
+      {
+        "date": "July 2023 – July 2025",
+        "title": "Frontend Developer",
+        "company": "Tekus",
+        "goals": [
+          "Built an Angular component library reducing code repetition by 50% and improving kiosk development speed by 40%.",
+          "Delivered a key project in two weeks by focusing scope and meeting client expectations on time."
+        ]
+      },
+      {
+        "date": "March 2022",
+        "title": "Full stack developer",
+        "company": "Leanware",
+        "goals": [
+          "Built a customizable document templates module, reducing preparation time by 80%.",
+          "Operated as the sole developer, meeting 100% of project objectives and deadlines.",
+          "Improved UI and core workflows, increasing customer satisfaction by ~80%.",
+          "Created an event tracking module for notifications/reminders about legislative changes, improving user awareness and efficiency."
+        ]
+      },
+      {
+        "date": "May 2021",
+        "title": "Full stack developer",
+        "company": "Pi Interactiva",
+        "goals": [
+          "Developed an interactive web game that boosted conversion rate by 20%, attracting new users.",
+          "Delivered core modules for an application for the Colombian Ministry of Education.",
+          "Led the dev team to build an e-learning platform for ANALDEX, reaching ~95% customer satisfaction."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "section_title": "Projects",
+    "code_label": "Code",
+    "preview_label": "Preview",
+    "items": [
+      {
+        "title": "Abordando — Travel Admin & Client Platform",
+        "description": "A full-featured travel management platform built as two distinct Next.js applications: an admin dashboard and a client-facing site. I handled the entire project end-to-end, from architecture to deployment. A key challenge was balancing rapid admin development with a custom, scalable client design system. For the admin, I chose a client-rendered approach and leveraged NextUI to accelerate UI development and streamline workflows. For the client, I implemented server-side rendering (SSR) to optimize SEO and used shadcn to craft a bespoke design system with custom components. The project required designing complex, dynamic forms, ensuring data consistency, and building responsive, intuitive interfaces for different user roles. My solutions included modular form components, real-time feedback with custom spinners and modals, and advanced search/autocomplete features. The result is a robust, scalable platform that simplifies travel operations and delivers a seamless booking experience.",
+        "links": [
+          "https://staging.abordando.com.co/",
+          "https://admin.staging.abordando.com.co/"
+        ],
+        "image": "/projects/abordando.webp",
+        "tags": ["NEXT", "REACT", "TAILWIND", "PRODUCT_DESIGN"]
+      },
+      {
+        "title": "Memento Mori — life in weeks",
+        "description": "Personal project to visualize life in weeks and reflect on time. The main challenge was translating a philosophical concept into a tangible, interactive experience that feels both personal and universal. As this is primarily an app, I focused on crafting an interface that evokes a sense of reflection and calm.\n\nA key design decision was to incorporate subtle skeuomorphism, drawing inspiration from classic paper or papyrus textures. I aimed for a balanced approach—suggesting the feel of a traditional medium without overwhelming the user, maintaining clarity and usability. This choice was intentional to visually express stoicism and philosophical depth, aligning the design language with the app's core message.\n\nI used Figma to prototype minimalist layouts, warm color palettes, and micro-interactions that encourage mindful engagement. The reminder and settings flows were designed to be intuitive, allowing users to set their birthdate and life expectancy with ease, and see immediate updates in the visualization.\n\nClever solutions included leveraging RxJS for reactive state management, optimizing rendering with Angular standalone components, and using Ionic's modal and picker components for smooth, native-like interactions. Persistent storage ensures user data is saved across sessions, and the app is fully PWA-ready for mobile use.",
+        "links": ["https://memento-mori-lilac.vercel.app"],
+        "github": "https://github.com/elonlegan/memento-mori",
+        "image": "/projects/memento-mori.webp",
+        "tags": ["IONIC", "ANGULAR", "FIGMA", "PRODUCT_DESIGN"]
+      },
+      {
+        "title": "Reporter.ia — AI-Powered News Summarizer",
+        "description": "This project was created during a hackathon in just over a day, aiming to transform news consumption with AI-driven summaries and a modern, accessible interface. One of the main challenges was experimenting with skeuomorphic design, trying to evoke the feel of traditional print media. However, I realized that classic newspaper typography and grid layouts do not translate well to digital products, and the intended sensations were not fully achieved. As a result, the project is currently awaiting a redesign to better convey a sense of modernity, speed, and effective problem-solving—reflecting its core value of delivering news summaries in minutes. The responsive UI, custom masonry layout, and intuitive search demonstrate my product thinking and frontend skills, but the design is in progress to truly match the experience users expect.",
+        "links": ["https://reporter-ia.vercel.app/"],
+        "github": "https://github.com/elonlegan/reporter.ia",
+        "image": "/projects/reporter-ia.webp",
+        "tags": ["NEXT", "TAILWIND"]
+      }
+    ]
+  },
+  "about": {
+    "section_title": "About",
+    "p1_pre": "I'm a",
+    "p1_role": "Product Engineer with",
+    "p1_exp_suffix": "of experience",
+    "p1_body": "who enjoys building products end-to-end. My background is fully technical—most of my career as a full stack engineer—so I bring a strong engineering foundation to every project. I've shipped production apps with <strong>Angular, React/Next.js</strong> and contributed across the stack with <strong>Node (Express/Nest)</strong>.",
+    "p2": "I care about <strong>product impact, user experience, and cross-functional collaboration</strong>. Lately I've been sharpening my <strong>UX/UI and design systems</strong> skills to deliver features that solve real user problems and drive business outcomes.",
+    "p3": "I thrive working on <strong>real product challenges</strong>, iterating fast, and measuring impact. I enjoy roles where I can bridge design and engineering, and collaborate with product, design, and development teams. If you're hiring for product engineering roles (remote or Spain), let's talk."
+  },
+  "footer": {
+    "contact": "Contact"
+  },
+  "meta": {
+    "title": "Angel Leon – Product Engineer",
+    "description": "Frontend engineer with 4+ years building performant web apps using Angular, React/Next.js, and TypeScript. Open to remote roles worldwide and opportunities in Spain.",
+    "skip_to_content": "Skip to content"
+  }
+}

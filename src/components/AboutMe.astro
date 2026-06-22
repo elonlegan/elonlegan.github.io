@@ -1,6 +1,12 @@
 ---
-const personalImageAlt = 'Angel Leon';
 import YearsExperience from '@/components/YearsExperience.astro';
+import type { Translations } from '@/i18n/utils';
+
+interface Props {
+	translations: Translations['about'];
+}
+
+const { translations: t } = Astro.props;
 ---
 
 <article
@@ -10,46 +16,19 @@ import YearsExperience from '@/components/YearsExperience.astro';
 		class='[&>p]:mb-4 [&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1'
 	>
 		<p>
-			I'm a <strong
-				>Product Engineer with <YearsExperience
-					start='2021-05-01'
-				/> of experience</strong
-			> who enjoys building products end-to-end. My background
-			is fully technical—most of my career as a full stack engineer—so
-			I bring a strong engineering foundation to every project.
-			I've shipped production apps with <strong
-				>Angular, React/Next.js</strong
-			> and contributed across the stack with <strong
-				>Node (Express/Nest)</strong
-			>.
+			{t.p1_pre} <strong
+				>{t.p1_role} <YearsExperience start='2021-05-01' /> {t.p1_exp_suffix}</strong
+			> <Fragment set:html={t.p1_body} />
 		</p>
-
-		<p>
-			I care about <strong
-				>product impact, user experience, and
-				cross-functional collaboration</strong
-			>. Lately I've been sharpening my <strong
-				>UX/UI and design systems</strong
-			> skills to deliver features that solve real user problems
-			and drive business outcomes.
-		</p>
-
-		<p>
-			I thrive working on <strong
-				>real product challenges</strong
-			>, iterating fast, and measuring impact. I enjoy roles
-			where I can bridge design and engineering, and
-			collaborate with product, design, and development
-			teams. If you're hiring for product engineering roles
-			(remote or Spain), let's talk.
-		</p>
+		<p set:html={t.p2} />
+		<p set:html={t.p3} />
 	</div>
 
 	<img
 		width='200'
 		height='200'
 		src='/me.webp'
-		alt={personalImageAlt}
+		alt='Angel Leon'
 		class='order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-yellow-500/5 ring-1 ring-white/20'
 		style='object-position: 50% 50%'
 	/>

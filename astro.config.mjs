@@ -8,4 +8,12 @@ import robotsTxt from 'astro-robots-txt';
 export default defineConfig({
 	integrations: [tailwind(), sitemap(), robotsTxt()],
 	site: 'https://elonlegan.github.io',
+	i18n: {
+		defaultLocale: 'en',
+		locales: ['en', 'es'],
+		routing: {
+			prefixDefaultLocale: true,
+			redirectToDefaultLocale: false,
+		},
+	},
 });

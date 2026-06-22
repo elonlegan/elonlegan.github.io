@@ -1,143 +1,151 @@
 ---
-import "@fontsource-variable/onest"
+import '@fontsource-variable/onest';
 
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
-import { ViewTransitions } from "astro:transitions"
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
+import { useTranslations, type Lang } from '@/i18n/utils';
 
 interface Props {
-  title: string
-  description: string
-  noindex?: boolean
+	title: string;
+	description: string;
+	lang: Lang;
+	noindex?: boolean;
 }
 
-const { description, title, noindex = false } = Astro.props
-const site = (Astro.site && Astro.site.toString()) || 'https://elonlegan.github.io'
-const url = Astro.url ? new URL(Astro.url.pathname, site) : new URL(site)
-const ogImage = new URL('/elonlegan.webp', site).href
+const { description, title, lang, noindex = false } = Astro.props;
+const t = useTranslations(lang);
+const site = (Astro.site && Astro.site.toString()) || 'https://elonlegan.github.io';
+const url = Astro.url ? new URL(Astro.url.pathname, site) : new URL(site);
+const ogImage = new URL('/elonlegan.webp', site).href;
+const ogLocale = lang === 'es' ? 'es_ES' : 'en_US';
+const alternateLang = lang === 'en' ? 'es' : 'en';
 const personSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Angel Leon',
-  url: site,
-  jobTitle: 'Full Stack Web Developer',
-  image: ogImage,
-  sameAs: [
-    'https://www.linkedin.com/in/elonlegan',
-    'https://github.com/elonlegan',
-  ],
-  knowsAbout: [
-    'JavaScript',
-    'TypeScript',
-    'Angular',
-    'React',
-    'Next.js',
-    'Node.js',
-    'Express',
-    'NestJS',
-    'Tailwind CSS',
-  ],
-}
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: 'Angel Leon',
+	url: `${site}/${lang}/`,
+	jobTitle: 'Product Engineer',
+	image: ogImage,
+	sameAs: [
+		'https://www.linkedin.com/in/elonlegan',
+		'https://github.com/elonlegan',
+	],
+	knowsAbout: [
+		'JavaScript',
+		'TypeScript',
+		'Angular',
+		'React',
+		'Next.js',
+		'Node.js',
+		'Express',
+		'NestJS',
+		'Tailwind CSS',
+	],
+};
 ---
 
 <!doctype html>
-<html lang="en" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-  {noindex && <meta name="robots" content="noindex, nofollow" />}
-    <meta name="author" content="Angel Leon" />
-    <link rel="canonical" href={url.href} />
+<html lang={lang} class='dark'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta name='description' content={description} />
+		<meta name='viewport' content='width=device-width' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<meta name='generator' content={Astro.generator} />
+		{noindex && <meta name='robots' content='noindex, nofollow' />}
+		<meta name='author' content='Angel Leon' />
+		<link rel='canonical' href={url.href} />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:site_name" content="Angel Leon" />
-    <meta property="og:url" content={url.href} />
-    <meta property="og:image" content={ogImage} />
-  <meta property="og:locale" content="en_US" />
+		<meta property='og:type' content='website' />
+		<meta property='og:title' content={title} />
+		<meta property='og:description' content={description} />
+		<meta property='og:site_name' content='Angel Leon' />
+		<meta property='og:url' content={url.href} />
+		<meta property='og:image' content={ogImage} />
+		<meta property='og:locale' content={ogLocale} />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} />
+		<meta name='twitter:card' content='summary_large_image' />
+		<meta name='twitter:title' content={title} />
+		<meta name='twitter:description' content={description} />
+		<meta name='twitter:image' content={ogImage} />
 
-  <meta name="theme-color" content="#0b0b0b" />
-  <link rel="alternate" hreflang="es" href={url.href} />
-    <!-- Microtip CSS (lightweight, CSS-only tooltips) -->
-    <link rel="stylesheet" href="https://unpkg.com/microtip/microtip.css" />
-    <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
-    <title>{title}</title>
-    <ViewTransitions />
-  </head>
+		<meta name='theme-color' content='#0b0b0b' />
+		<link rel='alternate' hreflang='en' href={`${site}/en/`} />
+		<link rel='alternate' hreflang='es' href={`${site}/es/`} />
+		<link rel='alternate' hreflang='x-default' href={site} />
+		<link rel='alternate' hreflang={alternateLang} href={`${site}/${alternateLang}/`} />
+		<!-- Microtip CSS (lightweight, CSS-only tooltips) -->
+		<link rel='stylesheet' href='https://unpkg.com/microtip/microtip.css' />
+		<script type='application/ld+json'>{JSON.stringify(personSchema)}</script>
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
 
-  <body class="relative text-white">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 bg-yellow-300 text-black px-3 py-2 rounded-md">Saltar al contenido</a>
-    <div class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
-    <Header />
-    <slot />
-    <Footer />
-    <style is:global>
-      :root { color-scheme: dark; }
+	<body class='relative text-white'>
+		<a
+			href='#main-content'
+			class='sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 bg-yellow-300 text-black px-3 py-2 rounded-md'
+		>
+			{t.meta.skip_to_content}
+		</a>
+		<div
+			class='absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]'
+		>
+		</div>
+		<Header nav={t.nav} />
+		<slot />
+		<Footer translations={t.footer} />
+		<style is:global>
+			:root {
+				color-scheme: dark;
+			}
 
-      html {
-        font-family: "Onest Variable", system-ui, sans-serif;
-        scroll-behavior: smooth;
-      }
+			html {
+				font-family: 'Onest Variable', system-ui, sans-serif;
+				scroll-behavior: smooth;
+			}
 
-      body { color: rgba(255, 255, 255, 0.9); display: flex; flex-direction: column; min-height: 100vh; overscroll-behavior: none; }
+			body {
+				color: rgba(255, 255, 255, 0.9);
+				display: flex;
+				flex-direction: column;
+				min-height: 100vh;
+				overscroll-behavior: none;
+			}
 
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
-        }
-      }
+			@media (prefers-reduced-motion: reduce) {
+				html {
+					scroll-behavior: auto;
+				}
+			}
 
-      /* Removed light scheme handling; site forced dark */
+			#header-nav {
+				animation: blur linear both 0.5s;
+				animation-timeline: scroll();
+				animation-range: 0 500px;
+			}
 
-      #header-nav {
-        animation: blur linear both 0.5s;
-        animation-timeline: scroll();
-        animation-range: 0 500px;
-      }
-
-      @keyframes blur {
-        to {
-          backdrop-filter: blur(20px);
-          border-width: 1px;
-          border-color: rgba(0, 0, 0);
-          padding: 0.25rem 0.75rem;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          background-color: rgb(229, 229, 229);
-          border-radius: 9999px;
-        }
-      }
-
-      @keyframes blur {
-        to {
-          box-shadow:
-            0px 5px 50px -5px rgba(0, 0, 0, 0.1),
-            0px 0px 0 1px rgba(0, 0, 0, 0.3);
-          background: rgba(0, 0, 0, 0.3);
-          backdrop-filter: blur(20px);
-          border-width: 1px;
-          border-color: rgba(0, 0, 0);
-          padding-left: 0.75rem;
-          padding-right: 0.75rem;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          background-color: rgba(0, 0, 0, 0.3);
-          border-radius: 9999px;
-        }
-      }
-    </style>
-  </body>
+			@keyframes blur {
+				to {
+					box-shadow:
+						0px 5px 50px -5px rgba(0, 0, 0, 0.1),
+						0px 0px 0 1px rgba(0, 0, 0, 0.3);
+					background: rgba(0, 0, 0, 0.3);
+					backdrop-filter: blur(20px);
+					border-width: 1px;
+					border-color: rgba(0, 0, 0);
+					padding-left: 0.75rem;
+					padding-right: 0.75rem;
+					padding-top: 0.25rem;
+					padding-bottom: 0.25rem;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					background-color: rgba(0, 0, 0, 0.3);
+					border-radius: 9999px;
+				}
+			}
+		</style>
+	</body>
 </html>

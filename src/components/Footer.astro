@@ -1,4 +1,11 @@
 ---
+import type { Translations } from '@/i18n/utils';
+
+interface Props {
+	translations: Translations['footer'];
+}
+
+const { translations: t } = Astro.props;
 const currentYear = new Date().getFullYear();
 ---
 
@@ -8,19 +15,14 @@ const currentYear = new Date().getFullYear();
 	<div
 		class='rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4'
 	>
-		<span class='text-sm sm:text-center text-zinc-200/90'
-			>© {currentYear}
-			elonlegan
+		<span class='text-sm sm:text-center text-zinc-200/90'>
+			© {currentYear} elonlegan
 		</span>
-		<ul
-			class='flex flex-wrap items-center mt-3 text-sm font-medium text-white/90 sm:mt-0'
-		>
+		<ul class='flex flex-wrap items-center mt-3 text-sm font-medium text-white/90 sm:mt-0'>
 			<li>
-				<a
-					id='contact'
-					href='mailto:elonlegan@gmail.com'
-					class='hover:underline'>Contact</a
-				>
+				<a id='contact' href='mailto:elonlegan@gmail.com' class='hover:underline'>
+					{t.contact}
+				</a>
 			</li>
 		</ul>
 	</div>

@@ -1,0 +1,15 @@
+---
+const pathname = Astro.url.pathname;
+const currentLang = pathname.startsWith('/es/') ? 'es' : 'en';
+const otherLang = currentLang === 'en' ? 'es' : 'en';
+const otherUrl = pathname.replace(`/${currentLang}/`, `/${otherLang}/`);
+const label = currentLang === 'en' ? 'Ver en español' : 'View in English';
+---
+
+<a
+	href={otherUrl}
+	aria-label={label}
+	class='relative block px-2 py-2 transition hover:text-blue-500 text-sm font-medium'
+>
+	{currentLang === 'en' ? 'ES' : 'EN'}
+</a>
