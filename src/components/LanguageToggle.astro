@@ -3,13 +3,138 @@ const pathname = Astro.url.pathname;
 const currentLang = pathname.startsWith('/es/') ? 'es' : 'en';
 const otherLang = currentLang === 'en' ? 'es' : 'en';
 const otherUrl = pathname.replace(`/${currentLang}/`, `/${otherLang}/`);
-const label = currentLang === 'en' ? 'Ver en español' : 'View in English';
+
+const meta = {
+	en: {
+		flagSrc: 'https://flagcdn.com/w20/gb.png',
+		flagSrc2x: 'https://flagcdn.com/w40/gb.png',
+		name: 'English',
+		label: 'View in English',
+	},
+	es: {
+		flagSrc: 'https://flagcdn.com/w20/es.png',
+		flagSrc2x: 'https://flagcdn.com/w40/es.png',
+		name: 'Español',
+		label: 'Ver en español',
+	},
+} as const;
 ---
 
-<a
-	href={otherUrl}
-	aria-label={label}
-	class='relative block px-2 py-2 transition hover:text-blue-500 text-sm font-medium'
->
-	{currentLang === 'en' ? 'ES' : 'EN'}
-</a>
+<div class='lt-wrapper'>
+	<span class='lt-divider' aria-hidden='true'></span>
+	<a href={otherUrl} aria-label={meta[otherLang].label} class='lt'>
+		<span class='lt-face lt-current'>
+			<img
+				src={meta[currentLang].flagSrc}
+				srcset={`${meta[currentLang].flagSrc2x} 2x`}
+				alt=''
+				width='20'
+				height='15'
+				class='lt-flag'
+			/>
+			<span class='lt-name'>{meta[currentLang].name}</span>
+		</span>
+		<span class='lt-face lt-target' aria-hidden='true'>
+			<img
+				src={meta[otherLang].flagSrc}
+				srcset={`${meta[otherLang].flagSrc2x} 2x`}
+				alt=''
+				width='20'
+				height='15'
+				class='lt-flag'
+			/>
+			<span class='lt-name'>{meta[otherLang].name}</span>
+		</span>
+	</a>
+</div>
+
+<style>
+	.lt-wrapper {
+		display: flex;
+		align-items: center;
+		gap: 0.375rem;
+		padding-left: 0.25rem;
+	}
+
+	.lt-divider {
+		width: 1px;
+		height: 14px;
+		background: rgba(255, 255, 255, 0.15);
+		flex-shrink: 0;
+	}
+
+	.lt {
+		position: relative;
+		display: flex;
+		align-items: center;
+		height: 28px;
+		padding: 0 0.6rem;
+		border-radius: 9999px;
+		border: 1px solid rgba(255, 255, 255, 0.12);
+		background: rgba(255, 255, 255, 0.04);
+		color: rgba(255, 255, 255, 0.65);
+		text-decoration: none;
+		overflow: hidden;
+		transition:
+			border-color 0.2s,
+			background 0.2s,
+			color 0.2s,
+			box-shadow 0.2s;
+	}
+
+	.lt:hover {
+		border-color: rgba(255, 255, 255, 0.28);
+		background: rgba(255, 255, 255, 0.09);
+		color: rgba(255, 255, 255, 0.95);
+		box-shadow:
+			0 0 14px rgba(120, 119, 198, 0.25),
+			inset 0 1px 0 rgba(255, 255, 255, 0.08);
+	}
+
+	.lt-face {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		transition:
+			transform 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+			opacity 0.22s;
+	}
+
+	.lt-current {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	.lt-target {
+		position: absolute;
+		left: 0.6rem;
+		transform: translateY(140%);
+		opacity: 0;
+	}
+
+	.lt:hover .lt-current {
+		transform: translateY(-140%);
+		opacity: 0;
+	}
+
+	.lt:hover .lt-target {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	.lt-flag {
+		width: 20px;
+		height: 13px;
+		border-radius: 2px;
+		object-fit: cover;
+		flex-shrink: 0;
+		box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+	}
+
+	.lt-name {
+		font-size: 0.7rem;
+		font-weight: 600;
+		letter-spacing: 0.03em;
+		white-space: nowrap;
+	}
+</style>
