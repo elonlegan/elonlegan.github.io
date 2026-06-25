@@ -12,7 +12,8 @@
     "bio_post_years": "construyendo productos digitales de impacto que combinan diseño e ingeniería. Con experiencia en <strong>Angular, React/Next.js, TypeScript</strong> y colaborando estrechamente con equipos de diseño. Me importan la <strong>experiencia de usuario</strong>, la estrategia de producto y lanzar funcionalidades que muevan métricas. Cómodo trabajando en toda la pila y cerrando la brecha entre diseño y desarrollo.",
     "cta_email": "Email",
     "cta_linkedin": "LinkedIn",
-    "cta_resume": "Descargar CV"
+    "cta_resume": "Descargar CV",
+    "resume_url": "https://docs.google.com/document/d/1V5vcC7syaYKFAlkUr1cmEoHvyZIayboWuqVmXtzLrvk/export?format=pdf"
   },
   "experience": {
     "section_title": "Experiencia",
