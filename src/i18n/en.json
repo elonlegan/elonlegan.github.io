@@ -92,6 +92,15 @@
     "p2": "I care about <strong>product impact, user experience, and cross-functional collaboration</strong>. Lately I've been sharpening my <strong>UX/UI and design systems</strong> skills to deliver features that solve real user problems and drive business outcomes.",
     "p3": "I thrive working on <strong>real product challenges</strong>, iterating fast, and measuring impact. I enjoy roles where I can bridge design and engineering, and collaborate with product, design, and development teams. If you're hiring for product engineering roles (remote or Spain), let's talk."
   },
+  "years": {
+    "label": "{n}+ years",
+    "year_one": "year",
+    "year_other": "years",
+    "month_one": "month",
+    "month_other": "months",
+    "day_one": "day",
+    "day_other": "days"
+  },
   "footer": {
     "contact": "Contact"
   },

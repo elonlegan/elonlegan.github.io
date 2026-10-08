@@ -1,4 +1,6 @@
 ---
+import { useTranslations, type Lang } from '@/i18n/utils'
+
 interface Props {
   /** ISO date string representing the start date, e.g., '2021-05-01' */
   start: string
@@ -7,6 +9,8 @@ interface Props {
 }
 
 const { start, label } = Astro.props as Props
+const t = useTranslations((Astro.currentLocale ?? 'en') as Lang).years
+const unit = (n: number, one: string, other: string) => `${n} ${n === 1 ? one : other}`
 
 // Build-time fallback (in case JS is disabled or before client hydration)
 function diffYM(from: Date, to: Date) {
@@ -35,9 +39,9 @@ function addYearsMonths(date: Date, y: number, m: number) {
 }
 function fmtCondensedLong(y: number, m: number, d: number, h: number, min: number, sec: number) {
   const parts: string[] = []
-  if (y > 0) parts.push(`${y} year${y === 1 ? '' : 's'}`)
-  if (m > 0) parts.push(`${m} month${m === 1 ? '' : 's'}`)
-  if (d > 0) parts.push(`${d} day${d === 1 ? '' : 's'}`)
+  if (y > 0) parts.push(unit(y, t.year_one, t.year_other))
+  if (m > 0) parts.push(unit(m, t.month_one, t.month_other))
+  if (d > 0) parts.push(unit(d, t.day_one, t.day_other))
   const time: string[] = []
   if (h > 0) time.push(`${h}h`)
   if (min > 0) time.push(`${min}m`)
@@ -56,7 +60,7 @@ const days = Math.floor(remainder / oneDay); remainder %= oneDay
 const hours = Math.floor(remainder / oneHour); remainder %= oneHour
 const minutes = Math.floor(remainder / oneMinute); remainder %= oneMinute
 const seconds = Math.floor(remainder / oneSecond)
-const computedLabel = `${Math.max(0, years)}+ years`
+const computedLabel = t.label.replace('{n}', String(Math.max(0, years)))
 // Totals from absolute start
 const totalMs = Math.max(0, now.getTime() - startDate.getTime())
 const totalDays = Math.floor(totalMs / oneDay)
@@ -71,6 +75,7 @@ const builtTooltip = condensed
   data-years-experience
   data-start={start}
   data-auto-label={label ? 'false' : 'true'}
+  data-i18n={JSON.stringify(t)}
   aria-label={builtTooltip}
   role="tooltip"
   data-microtip-position="top"
@@ -86,6 +91,8 @@ const builtTooltip = condensed
       els.forEach((el) => {
         const start = el.getAttribute('data-start')
         if (!start) return
+        const t = JSON.parse(el.getAttribute('data-i18n') || '{}')
+        const unit = (n, one, other) => `${n} ${n === 1 ? one : other}`
         const startDate = new Date(start)
         const now = new Date()
         let years = now.getFullYear() - startDate.getFullYear()
@@ -109,9 +116,9 @@ const builtTooltip = condensed
         const seconds = Math.floor(remainder / oneSecond)
 
   const parts = []
-  if (years > 0) parts.push(`${years} year${years === 1 ? '' : 's'}`)
-  if (months > 0) parts.push(`${months} month${months === 1 ? '' : 's'}`)
-  if (days > 0) parts.push(`${days} day${days === 1 ? '' : 's'}`)
+  if (years > 0) parts.push(unit(years, t.year_one, t.year_other))
+  if (months > 0) parts.push(unit(months, t.month_one, t.month_other))
+  if (days > 0) parts.push(unit(days, t.day_one, t.day_other))
   const timeParts = []
   if (hours > 0) timeParts.push(`${hours}h`)
   if (minutes > 0) timeParts.push(`${minutes}m`)
@@ -129,7 +136,7 @@ const builtTooltip = condensed
         const auto = el.getAttribute('data-auto-label') === 'true'
         if (auto) {
           const labelNode = el.querySelector('[data-ye-label]')
-          if (labelNode) labelNode.textContent = `${Math.max(0, years)}+ years`
+          if (labelNode) labelNode.textContent = t.label.replace('{n}', Math.max(0, years))
         }
       })
     }

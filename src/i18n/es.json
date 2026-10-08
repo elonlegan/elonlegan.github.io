@@ -92,6 +92,15 @@
     "p2": "Me importan el <strong>impacto del producto, la experiencia de usuario y la colaboración multifuncional</strong>. Últimamente he estado perfeccionando mis habilidades de <strong>UX/UI y sistemas de diseño</strong> para entregar funcionalidades que resuelvan problemas reales de usuario y generen resultados de negocio.",
     "p3": "Me desarrollo bien trabajando en <strong>retos de producto reales</strong>, iterando rápido y midiendo el impacto. Disfruto de roles donde puedo unir diseño e ingeniería, y colaborar con equipos de producto, diseño y desarrollo. Si estás buscando perfiles de product engineering (remoto o España), hablemos."
   },
+  "years": {
+    "label": "{n}+ años",
+    "year_one": "año",
+    "year_other": "años",
+    "month_one": "mes",
+    "month_other": "meses",
+    "day_one": "día",
+    "day_other": "días"
+  },
   "footer": {
     "contact": "Contacto"
   },
