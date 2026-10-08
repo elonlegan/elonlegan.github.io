@@ -48,6 +48,7 @@ const { translations: t } = Astro.props;
 		</SocialPill>
 		<SocialPill
 			href={t.resume_url}
+			download={t.resume_url.split('/').pop()}
 			aria-label='Download resume as PDF'
 		>
 			<DownloadIcon class='size-4' />
