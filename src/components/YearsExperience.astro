@@ -75,7 +75,7 @@ const builtTooltip = condensed
   role="tooltip"
   data-microtip-position="top"
   data-microtip-size="large"
-  class="underline decoration-dotted underline-offset-4 cursor-help"
+  class="underline decoration-dotted underline-offset-4 cursor-help whitespace-nowrap"
 >
   <span data-ye-label>{label ?? computedLabel}</span>
   <span class="sr-only">, {builtTooltip}</span>
@@ -121,6 +121,9 @@ const builtTooltip = condensed
   // Microtip reads aria-label; avoid native title to prevent double UI
   el.removeAttribute('title')
   el.setAttribute('aria-label', tooltip)
+  // Offset from the trigger's center to the viewport's center, used by the small-screen CSS
+  const rect = el.getBoundingClientRect()
+  el.style.setProperty('--ye-shift', `${Math.round(document.documentElement.clientWidth / 2 - (rect.left + rect.width / 2))}px`)
 
         // Auto-label update if no custom label provided
         const auto = el.getAttribute('data-auto-label') === 'true'
@@ -148,4 +151,16 @@ const builtTooltip = condensed
   </script>
 </span>
 
-<!-- No extra CSS needed; tooltip is single-line condensed-long format -->
+<!-- On small screens the script's --ye-shift centers the tooltip on the viewport so it cannot widen the page -->
+<style is:global>
+  @media (max-width: 639px) {
+    [data-years-experience][role~='tooltip'][data-microtip-position='top']::after {
+      max-width: calc(100vw - 2rem);
+      transform: translate3d(calc(-50% + var(--ye-shift, 0px)), 0, 0);
+    }
+    [data-years-experience][role~='tooltip'][data-microtip-position='top']:hover::after,
+    [data-years-experience][role~='tooltip'][data-microtip-position='top']:focus::after {
+      transform: translate3d(calc(-50% + var(--ye-shift, 0px)), -5px, 0);
+    }
+  }
+</style>
