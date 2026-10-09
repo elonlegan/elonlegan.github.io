@@ -19,6 +19,15 @@
     "section_title": "Experience",
     "items": [
       {
+        "date": "July 2025 – Present",
+        "title": "Full Stack Developer",
+        "company": "Freelance",
+        "goals": [
+          "Built and launched Abordando, a dual Next.js platform for a travel agency: catalog, quotations, PlacetoPay WebCheckout payments, hotel inventory through the TBO API, and deployment on AWS (S3, Amplify).",
+          "Built Yahisi, a multi-tenant SaaS for kiosks (Next.js admin, SvelteKit kiosk) with real-time ordering, per-tenant isolation with row-level security on Supabase/PostgreSQL, and a public API for the devices."
+        ]
+      },
+      {
         "date": "July 2023 – July 2025",
         "title": "Frontend Developer",
         "company": "Tekus",

@@ -19,6 +19,15 @@
     "section_title": "Experiencia",
     "items": [
       {
+        "date": "Julio 2025 – Presente",
+        "title": "Full Stack Developer",
+        "company": "Freelance",
+        "goals": [
+          "Desarrollé y lancé Abordando, plataforma dual en Next.js para una agencia de viajes: catálogo, cotizaciones, pagos con PlacetoPay WebCheckout, inventario hotelero vía API TBO y despliegue en AWS (S3, Amplify).",
+          "Desarrollé Yahisi, SaaS multi-tenant para kioscos (admin en Next.js, kiosco en SvelteKit) con pedidos en tiempo real, aislamiento por tenant con row-level security en Supabase/PostgreSQL y API pública para los dispositivos."
+        ]
+      },
+      {
         "date": "Julio 2023 – Julio 2025",
         "title": "Frontend Developer",
         "company": "Tekus",
