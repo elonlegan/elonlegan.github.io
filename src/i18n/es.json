@@ -67,7 +67,7 @@
     "items": [
       {
         "title": "Abordando — Plataforma de Gestión de Viajes",
-        "description": "Plataforma completa de gestión de viajes construida como dos aplicaciones Next.js distintas: un panel de administración y un sitio orientado al cliente. Manejé el proyecto de principio a fin, desde la arquitectura hasta el despliegue. El reto principal fue equilibrar el desarrollo ágil del panel admin con un sistema de diseño personalizado y escalable para el cliente. Para el admin, elegí un enfoque client-side y aproveché NextUI para acelerar el desarrollo de UI. Para el cliente, implementé SSR para optimizar el SEO y usé shadcn para crear un sistema de diseño a medida con componentes personalizados. El proyecto requirió diseñar formularios dinámicos complejos, garantizar la consistencia de datos y construir interfaces responsivas e intuitivas para distintos roles de usuario. El resultado es una plataforma robusta y escalable que simplifica las operaciones de viaje.",
+        "description": "Plataforma de gestión de viajes en dos aplicaciones Next.js: un panel de administración client-side con NextUI y un sitio para clientes con SSR y un sistema de diseño a medida sobre shadcn. Lo llevé de principio a fin, de la arquitectura al despliegue.",
         "links": [
           "https://staging.abordando.com.co/",
           "https://admin.staging.abordando.com.co/"
@@ -77,14 +77,14 @@
       },
       {
         "title": "ADN Run Club — Landing del evento Mal de Amores",
-        "description": "Landing de venta de entradas para MAL DE AMORES, el primer gran evento de ADN Run Club: un social running de 5K con música y fiesta frente al embalse en La Calera, Colombia. Me encargué del diseño y del desarrollo de principio a fin. El reto principal fue que, al ser un club pequeño, la marca no estaba definida del todo: partí del logo, las fotos y las piezas gráficas que ya tenían y los ayudé a sacarles el máximo partido, con guías de marca y definiciones de color que se convirtieron en el sistema visual de la página.\n\nLa landing está pensada para vender: tipos de entrada explicados con claridad, kit, medios de pago, transporte y preguntas frecuentes, con un CTA siempre visible que lleva la compra directo a WhatsApp, el canal que el club ya usaba. Es un sitio estático en Astro y Tailwind CSS, con todo el contenido centralizado en un único archivo de configuración para cambiar precios, fechas o secciones sin tocar componentes.\n\nEl evento reunió a 170 personas.",
+        "description": "Landing de venta de entradas para MAL DE AMORES, el primer gran evento de ADN Run Club: un social running de 5K en La Calera, Colombia. Diseñé y desarrollé el sitio en Astro, definí las guías de marca y color, y llevé la compra directo a WhatsApp. El evento reunió a 170 personas.",
         "links": ["https://adn-run-club.vercel.app"],
         "image": "/projects/adn-run-club.webp",
         "tags": ["ASTRO", "TAILWIND", "PRODUCT_DESIGN"]
       },
       {
         "title": "Memento Mori — la vida en semanas",
-        "description": "Proyecto personal para visualizar la vida en semanas y reflexionar sobre el tiempo. El reto principal fue traducir un concepto filosófico en una experiencia tangible e interactiva que se sienta personal y universal. Me enfoqué en crear una interfaz que evoque reflexión y calma.\n\nUna decisión clave de diseño fue incorporar skeuomorfismo sutil, inspirándome en texturas de papel clásico. Busqué un enfoque equilibrado—sugiriendo la sensación de un medio tradicional sin abrumar al usuario. Usé Figma para prototipar layouts minimalistas, paletas de colores cálidas y micro-interacciones que fomentan el compromiso reflexivo.\n\nLas soluciones técnicas incluyeron aprovechar RxJS para la gestión de estado reactivo, optimizar el renderizado con componentes standalone de Angular y usar los componentes modal y picker de Ionic para interacciones fluidas y nativas. El almacenamiento persistente garantiza que los datos del usuario se guarden entre sesiones, y la app es completamente PWA para uso móvil.",
+        "description": "Proyecto personal para visualizar la vida en semanas y reflexionar sobre el tiempo. Diseñado en Figma con un skeuomorfismo sutil inspirado en papel clásico, y construido como PWA con Angular, Ionic y RxJS.",
         "links": ["https://memento-mori-lilac.vercel.app"],
         "github": "https://github.com/elonlegan/memento-mori",
         "image": "/projects/memento-mori.webp",
@@ -92,7 +92,7 @@
       },
       {
         "title": "Reporter.ia — Resumidor de Noticias con IA",
-        "description": "Este proyecto se creó durante un hackathon en poco más de un día, con el objetivo de transformar el consumo de noticias con resúmenes impulsados por IA y una interfaz moderna y accesible. Uno de los principales retos fue experimentar con diseño skeuomórfico, intentando evocar la sensación de los medios impresos tradicionales. Sin embargo, me di cuenta de que la tipografía y los layouts de periódico clásicos no se traducen bien a productos digitales. El proyecto está actualmente a la espera de un rediseño para transmitir mejor modernidad, velocidad y resolución efectiva de problemas. La UI responsiva, el layout de mosaico personalizado y la búsqueda intuitiva demuestran mi pensamiento de producto y habilidades frontend.",
+        "description": "Resumidor de noticias con IA creado en un hackathon en poco más de un día. Experimenté con un diseño skeuomórfico inspirado en la prensa impresa; no se tradujo bien a digital, así que está pendiente de rediseño.",
         "links": ["https://reporter-ia.vercel.app/"],
         "github": "https://github.com/elonlegan/reporter.ia",
         "image": "/projects/reporter-ia.webp",

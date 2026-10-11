@@ -67,7 +67,7 @@
     "items": [
       {
         "title": "Abordando — Travel Admin & Client Platform",
-        "description": "A full-featured travel management platform built as two distinct Next.js applications: an admin dashboard and a client-facing site. I handled the entire project end-to-end, from architecture to deployment. A key challenge was balancing rapid admin development with a custom, scalable client design system. For the admin, I chose a client-rendered approach and leveraged NextUI to accelerate UI development and streamline workflows. For the client, I implemented server-side rendering (SSR) to optimize SEO and used shadcn to craft a bespoke design system with custom components. The project required designing complex, dynamic forms, ensuring data consistency, and building responsive, intuitive interfaces for different user roles. My solutions included modular form components, real-time feedback with custom spinners and modals, and advanced search/autocomplete features. The result is a robust, scalable platform that simplifies travel operations and delivers a seamless booking experience.",
+        "description": "Travel management platform built as two Next.js apps: a client-rendered admin dashboard with NextUI and a customer site with SSR and a custom design system on shadcn. I owned it end to end, from architecture to deployment.",
         "links": [
           "https://staging.abordando.com.co/",
           "https://admin.staging.abordando.com.co/"
@@ -77,14 +77,14 @@
       },
       {
         "title": "ADN Run Club — Mal de Amores Event Landing Page",
-        "description": "Ticket-sales landing page for MAL DE AMORES, the first major event by ADN Run Club: a 5K social run with music and a party by the reservoir in La Calera, Colombia. I handled design and development end to end. The main challenge was that, as a small club, the brand was not fully defined: I started from the logo, photos, and graphic pieces they already had and helped them get the most out of them, with brand guidelines and color definitions that became the page's visual system.\n\nThe page is built to sell: clearly explained ticket types, kit, payment methods, transport, and FAQ, with an always-visible CTA that takes the purchase straight to WhatsApp, the channel the club already used. It is a static site built with Astro and Tailwind CSS, with all content centralized in a single configuration file so prices, dates, or sections can change without touching components.\n\nThe event brought together 170 people.",
+        "description": "Ticket-sales landing page for MAL DE AMORES, ADN Run Club's first major event: a 5K social run in La Calera, Colombia. I designed and built the site in Astro, defined the brand and color guidelines, and sent checkout straight to WhatsApp. The event brought together 170 people.",
         "links": ["https://adn-run-club.vercel.app"],
         "image": "/projects/adn-run-club.webp",
         "tags": ["ASTRO", "TAILWIND", "PRODUCT_DESIGN"]
       },
       {
         "title": "Memento Mori — life in weeks",
-        "description": "Personal project to visualize life in weeks and reflect on time. The main challenge was translating a philosophical concept into a tangible, interactive experience that feels both personal and universal. As this is primarily an app, I focused on crafting an interface that evokes a sense of reflection and calm.\n\nA key design decision was to incorporate subtle skeuomorphism, drawing inspiration from classic paper or papyrus textures. I aimed for a balanced approach—suggesting the feel of a traditional medium without overwhelming the user, maintaining clarity and usability. This choice was intentional to visually express stoicism and philosophical depth, aligning the design language with the app's core message.\n\nI used Figma to prototype minimalist layouts, warm color palettes, and micro-interactions that encourage mindful engagement. The reminder and settings flows were designed to be intuitive, allowing users to set their birthdate and life expectancy with ease, and see immediate updates in the visualization.\n\nClever solutions included leveraging RxJS for reactive state management, optimizing rendering with Angular standalone components, and using Ionic's modal and picker components for smooth, native-like interactions. Persistent storage ensures user data is saved across sessions, and the app is fully PWA-ready for mobile use.",
+        "description": "Personal project to visualize life in weeks and reflect on time. Designed in Figma with subtle skeuomorphism inspired by classic paper, and built as a PWA with Angular, Ionic, and RxJS.",
         "links": ["https://memento-mori-lilac.vercel.app"],
         "github": "https://github.com/elonlegan/memento-mori",
         "image": "/projects/memento-mori.webp",
@@ -92,7 +92,7 @@
       },
       {
         "title": "Reporter.ia — AI-Powered News Summarizer",
-        "description": "This project was created during a hackathon in just over a day, aiming to transform news consumption with AI-driven summaries and a modern, accessible interface. One of the main challenges was experimenting with skeuomorphic design, trying to evoke the feel of traditional print media. However, I realized that classic newspaper typography and grid layouts do not translate well to digital products, and the intended sensations were not fully achieved. As a result, the project is currently awaiting a redesign to better convey a sense of modernity, speed, and effective problem-solving—reflecting its core value of delivering news summaries in minutes. The responsive UI, custom masonry layout, and intuitive search demonstrate my product thinking and frontend skills, but the design is in progress to truly match the experience users expect.",
+        "description": "AI news summarizer built at a hackathon in just over a day. I experimented with a skeuomorphic design inspired by print media; it did not translate well to digital, so a redesign is pending.",
         "links": ["https://reporter-ia.vercel.app/"],
         "github": "https://github.com/elonlegan/reporter.ia",
         "image": "/projects/reporter-ia.webp",
