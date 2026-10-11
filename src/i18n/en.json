@@ -24,7 +24,8 @@
         "company": "Freelance",
         "goals": [
           "Built and launched Abordando, a dual Next.js platform for a travel agency: catalog, quotations, PlacetoPay WebCheckout payments, hotel inventory through the TBO API, and deployment on AWS (S3, Amplify).",
-          "Built Yahisi, a multi-tenant SaaS for kiosks (Next.js admin, SvelteKit kiosk) with real-time ordering, per-tenant isolation with row-level security on Supabase/PostgreSQL, and a public API for the devices."
+          "Built Yahisi, a multi-tenant SaaS for kiosks (Next.js admin, SvelteKit kiosk) with real-time ordering, per-tenant isolation with row-level security on Supabase/PostgreSQL, and a public API for the devices.",
+          "Designed and built the ADN Run Club landing page, a ticket-sales site in Astro for the club's first major event: brand and color guidelines, WhatsApp checkout, and 170 attendees."
         ]
       },
       {
@@ -73,6 +74,13 @@
         ],
         "image": "/projects/abordando.webp",
         "tags": ["NEXT", "REACT", "TAILWIND", "PRODUCT_DESIGN"]
+      },
+      {
+        "title": "ADN Run Club — Mal de Amores Event Landing Page",
+        "description": "Ticket-sales landing page for MAL DE AMORES, the first major event by ADN Run Club: a 5K social run with music and a party by the reservoir in La Calera, Colombia. I handled design and development end to end. The main challenge was that, as a small club, the brand was not fully defined: I started from the logo, photos, and graphic pieces they already had and helped them get the most out of them, with brand guidelines and color definitions that became the page's visual system.\n\nThe page is built to sell: clearly explained ticket types, kit, payment methods, transport, and FAQ, with an always-visible CTA that takes the purchase straight to WhatsApp, the channel the club already used. It is a static site built with Astro and Tailwind CSS, with all content centralized in a single configuration file so prices, dates, or sections can change without touching components.\n\nThe event brought together 170 people.",
+        "links": ["https://adn-run-club.vercel.app"],
+        "image": "/projects/adn-run-club.webp",
+        "tags": ["ASTRO", "TAILWIND", "PRODUCT_DESIGN"]
       },
       {
         "title": "Memento Mori — life in weeks",

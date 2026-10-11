@@ -24,7 +24,8 @@
         "company": "Freelance",
         "goals": [
           "Desarrollé y lancé Abordando, plataforma dual en Next.js para una agencia de viajes: catálogo, cotizaciones, pagos con PlacetoPay WebCheckout, inventario hotelero vía API TBO y despliegue en AWS (S3, Amplify).",
-          "Desarrollé Yahisi, SaaS multi-tenant para kioscos (admin en Next.js, kiosco en SvelteKit) con pedidos en tiempo real, aislamiento por tenant con row-level security en Supabase/PostgreSQL y API pública para los dispositivos."
+          "Desarrollé Yahisi, SaaS multi-tenant para kioscos (admin en Next.js, kiosco en SvelteKit) con pedidos en tiempo real, aislamiento por tenant con row-level security en Supabase/PostgreSQL y API pública para los dispositivos.",
+          "Diseñé y desarrollé la landing de ADN Run Club, sitio de venta de entradas en Astro para su primer gran evento: guías de marca y color, compra por WhatsApp y 170 asistentes."
         ]
       },
       {
@@ -73,6 +74,13 @@
         ],
         "image": "/projects/abordando.webp",
         "tags": ["NEXT", "REACT", "TAILWIND", "PRODUCT_DESIGN"]
+      },
+      {
+        "title": "ADN Run Club — Landing del evento Mal de Amores",
+        "description": "Landing de venta de entradas para MAL DE AMORES, el primer gran evento de ADN Run Club: un social running de 5K con música y fiesta frente al embalse en La Calera, Colombia. Me encargué del diseño y del desarrollo de principio a fin. El reto principal fue que, al ser un club pequeño, la marca no estaba definida del todo: partí del logo, las fotos y las piezas gráficas que ya tenían y los ayudé a sacarles el máximo partido, con guías de marca y definiciones de color que se convirtieron en el sistema visual de la página.\n\nLa landing está pensada para vender: tipos de entrada explicados con claridad, kit, medios de pago, transporte y preguntas frecuentes, con un CTA siempre visible que lleva la compra directo a WhatsApp, el canal que el club ya usaba. Es un sitio estático en Astro y Tailwind CSS, con todo el contenido centralizado en un único archivo de configuración para cambiar precios, fechas o secciones sin tocar componentes.\n\nEl evento reunió a 170 personas.",
+        "links": ["https://adn-run-club.vercel.app"],
+        "image": "/projects/adn-run-club.webp",
+        "tags": ["ASTRO", "TAILWIND", "PRODUCT_DESIGN"]
       },
       {
         "title": "Memento Mori — la vida en semanas",
